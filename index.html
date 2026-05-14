@@ -159,14 +159,17 @@
   .mm-grid-5 { grid-template-columns: repeat(5, 1fr); }
   .mm-card { text-decoration: none; display: flex; flex-direction: column; gap: 8px; }
   .mm-card-img {
-    background: linear-gradient(135deg, #f0e4e0 0%, #e4d0cc 100%);
+    background: #f0e4e0;
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
-    transition: background 0.3s;
   }
-  .mm-card-img svg { opacity: 0.25; transition: opacity 0.3s; }
-  .mm-card:hover .mm-card-img { background: linear-gradient(135deg, #e8d4d0 0%, #d8beba 100%); }
-  .mm-card:hover .mm-card-img svg { opacity: 0.45; }
+  .mm-card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+  .mm-card:hover .mm-card-img img { transform: scale(1.06); }
   .mm-card-img-lg { height: 140px; }
   .mm-card-img-sm { height: 96px; }
   .mm-card-name {
@@ -1706,16 +1709,16 @@
         <div class="mm-col mm-col-wide">
           <span class="mm-label">Collections</span>
           <div class="mm-grid mm-grid-5">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Abbraccio</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Carezza</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Classico</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Couture</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Eleganza</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Per Lei</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Petalo</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Solo Filo</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Unito</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Voltaggio</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_abbraccio-1_1.jpg" alt="Abbraccio"></div><span class="mm-card-name">Abbraccio</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_carezza-1.jpg" alt="Carezza"></div><span class="mm-card-name">Carezza</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_classico-1_1_1.jpg" alt="Classico"></div><span class="mm-card-name">Classico</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_couture.jpg" alt="Couture"></div><span class="mm-card-name">Couture</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_eleganza_1.jpg" alt="Eleganza"></div><span class="mm-card-name">Eleganza</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_per-lei.jpg" alt="Per Lei"></div><span class="mm-card-name">Per Lei</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_petalo_1.jpg" alt="Petalo"></div><span class="mm-card-name">Petalo</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_solo-filo.jpg" alt="Solo Filo"></div><span class="mm-card-name">Solo Filo</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_unito.jpg" alt="Unito"></div><span class="mm-card-name">Unito</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/category/VE509P_1_WG_2_1_.jpg" alt="Voltaggio"></div><span class="mm-card-name">Voltaggio</span></a>
           </div>
           <a href="#" class="mm-explore">Explore All Engagement Rings &rarr;</a>
         </div>
@@ -1728,7 +1731,7 @@
           </div>
           <div style="margin-top:32px;">
             <span class="mm-label">Award Winners</span>
-            <div class="mm-card-img mm-card-img-lg" style="border-radius:2px;"><svg class="mm-ring-svg" style="width:56px;height:56px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div>
+            <div class="mm-card-img mm-card-img-lg" style="border-radius:2px;"><img src="https://www.danhov.com/media/catalog/category/img_menu-item_award-winners-1.jpg" alt="Award Winners" style="width:100%;height:100%;object-fit:cover;"></div>
           </div>
         </div>
       </div>
@@ -1741,9 +1744,9 @@
         <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
           <span class="mm-label">Shop by Category</span>
           <div class="mm-grid mm-grid-3" style="max-width:700px;">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Award Winners</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="22" rx="12" ry="5" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Her Bands</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="22" rx="12" ry="5" stroke="#AC3438" stroke-width="2"/></svg></div><span class="mm-card-name">His Bands</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/cm500-8_3_1_1_1_1_.jpg" alt="Award Winners"></div><span class="mm-card-name">Award Winners</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/ScreenShot_61_2_.png" alt="Her Bands"></div><span class="mm-card-name">Her Bands</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/cs233__3_1_1_.jpg" alt="His Bands"></div><span class="mm-card-name">His Bands</span></a>
           </div>
           <a href="#" class="mm-explore">View All Wedding Bands &rarr;</a>
         </div>
@@ -1757,11 +1760,11 @@
         <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
           <span class="mm-label">Shop by Category</span>
           <div class="mm-grid mm-grid-3" style="max-width:700px;">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="22" rx="12" ry="5" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Bands</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="14" r="5" stroke="#AC3438" stroke-width="1.5"/><line x1="18" y1="19" x2="18" y2="30" stroke="#AC3438" stroke-width="1.5"/><path d="M14 30 Q18 28 22 30" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Earrings</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><path d="M18 8 L20 14 L18 12 L16 14 Z" stroke="#AC3438" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="7" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Pendants</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Rings</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="8" stroke="#AC3438" stroke-width="1.5"/><circle cx="18" cy="18" r="4" stroke="#AC3438" stroke-width="1"/></svg></div><span class="mm-card-name">Pop of Color</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/KB500MA_1_1_1_.jpg" alt="Bands"></div><span class="mm-card-name">Bands</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/AH501U_ROUND_Body_RG_1_1_1_.jpg" alt="Earrings"></div><span class="mm-card-name">Earrings</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/wg_1_15_1.jpg" alt="Pendants"></div><span class="mm-card-name">Pendants</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/CS621_Pear_WG_1_.jpg" alt="Rings"></div><span class="mm-card-name">Rings</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/12_1.jpg" alt="Pop of Color"></div><span class="mm-card-name">Pop of Color</span></a>
           </div>
           <a href="#" class="mm-explore">Explore All Fine Jewelry &rarr;</a>
         </div>
@@ -1775,9 +1778,9 @@
         <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
           <span class="mm-label">Shop Men's</span>
           <div class="mm-grid mm-grid-3" style="max-width:700px;">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="2"/></svg></div><span class="mm-card-name">Rings</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><path d="M6 18 Q10 14 18 16 Q26 18 30 14" stroke="#AC3438" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M6 22 Q10 18 18 20 Q26 22 30 18" stroke="#AC3438" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div><span class="mm-card-name">Bracelets</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="10" r="4" stroke="#AC3438" stroke-width="1.5"/><line x1="18" y1="14" x2="18" y2="30" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Necklaces &amp; Pendants</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/VM532S-RG_1_.jpg" alt="Rings"></div><span class="mm-card-name">Rings</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/13_1_1_1_.jpg" alt="Bracelets"></div><span class="mm-card-name">Bracelets</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/category/12_2_1_.jpg" alt="Necklaces &amp; Pendants"></div><span class="mm-card-name">Necklaces &amp; Pendants</span></a>
           </div>
           <a href="#" class="mm-explore">Explore All Men's &rarr;</a>
         </div>
