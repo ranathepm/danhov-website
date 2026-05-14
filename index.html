@@ -16,6 +16,8 @@
     --gold-dim: #c9a898;
     --crimson: #b5606a;
     --crimson-bright: #b5606a;
+    --logo-red: #AC3438;
+    --logo-red-dark: #8B2A2D;
     --blush: #e8b4bc;
     --cream: #3d2520;
     --grey: #7a5c58;
@@ -98,24 +100,24 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #fff8f6;
-    background: var(--gold);
+    background: var(--logo-red);
     padding: 10px 24px;
     text-decoration: none;
     transition: background 0.3s;
   }
-  .nav-cta:hover { background: var(--gold-light); }
+  .nav-cta:hover { background: var(--logo-red-dark); }
 
   /* CINEMATIC HERO */
   .cinematic-hero { text-align: center; margin: 40px 0 48px; }
   .ch-line { display: block; opacity: 0; transform: translateY(16px); transition: opacity 1.4s ease, transform 1.4s ease; }
   .ch-line.visible { opacity: 1; transform: translateY(0); }
-  .ch-silence { font-family: 'Cinzel', serif; font-size: clamp(13px, 1.8vw, 22px); letter-spacing: 0.6em; text-transform: uppercase; color: var(--grey); margin-bottom: 0.6em; }
-  .ch-realized { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 72px); font-weight: 300; color: var(--cream); font-style: italic; line-height: 1.1; }
-  .ch-oneness { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 120px); font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 0.3em; }
-  .ch-divider { width: 0; height: 1px; background: var(--gold); margin: 32px auto; transition: width 1.2s ease; }
+  .ch-silence { font-family: 'Cinzel', serif; font-size: clamp(16px, 2.2vw, 28px); letter-spacing: 0.6em; text-transform: uppercase; color: var(--logo-red); margin-bottom: 0.6em; }
+  .ch-realized { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 6vw, 86px); font-weight: 300; color: var(--logo-red); font-style: italic; line-height: 1.1; }
+  .ch-oneness { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 9.5vw, 140px); font-weight: 300; color: var(--logo-red); line-height: 1; margin-bottom: 0.3em; }
+  .ch-divider { width: 0; height: 1px; background: var(--logo-red); margin: 32px auto; transition: width 1.2s ease; }
   .ch-divider.visible { width: 60px; }
-  .ch-ring { font-family: 'Cinzel', serif; font-size: clamp(18px, 2.8vw, 42px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3em; }
-  .ch-messaged { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4.5vw, 64px); font-weight: 300; font-style: italic; color: var(--crimson-bright); line-height: 1.1; }
+  .ch-ring { font-family: 'Cinzel', serif; font-size: clamp(22px, 3.4vw, 52px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--logo-red); margin-bottom: 0.3em; }
+  .ch-messaged { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 5.5vw, 78px); font-weight: 300; font-style: italic; color: var(--logo-red); line-height: 1.1; }
 
   /* HERO */
   .hero {
@@ -188,10 +190,10 @@
 
   .hero-eyebrow {
     font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.5em;
+    font-size: clamp(15px, 2vw, 22px);
+    letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--logo-red);
     opacity: 0;
     animation: fadeUp 1.2s ease 0.3s forwards;
   }
@@ -383,14 +385,14 @@
   }
   .section-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(40px, 6vw, 80px);
+    font-size: clamp(48px, 7vw, 96px);
     font-weight: 300;
     line-height: 1.05;
-    color: var(--cream);
+    color: var(--logo-red);
     max-width: 800px;
     margin: 0 auto;
   }
-  .section-title em { font-style: italic; color: var(--gold); }
+  .section-title em { font-style: italic; color: var(--logo-red-dark); }
   .section-body {
     max-width: 560px;
     margin: 32px auto 0;
@@ -681,8 +683,8 @@
     display: inline-block;
     padding: 16px 40px;
     background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+    border: 1px solid var(--logo-red);
+    color: var(--logo-red);
     font-family: 'Cinzel', serif;
     font-size: 11px;
     letter-spacing: 0.3em;
@@ -691,13 +693,13 @@
     transition: all 0.3s;
   }
   .btn-primary:hover {
-    background: var(--gold);
-    color: var(--black);
+    background: var(--logo-red);
+    color: #fff8f6;
   }
   .btn-solid {
     display: inline-block;
     padding: 16px 40px;
-    background: var(--crimson);
+    background: var(--logo-red);
     color: #fff8f6;
     font-family: 'Cinzel', serif;
     font-size: 11px;
@@ -707,7 +709,7 @@
     transition: all 0.3s;
     margin-left: 16px;
   }
-  .btn-solid:hover { background: var(--crimson-bright); }
+  .btn-solid:hover { background: var(--logo-red-dark); }
 
   /* COLLECTIONS GRID */
   .collections-section {
@@ -1636,7 +1638,7 @@
 
     <div class="origin-founder" id="heroFounder" style="opacity:0;">
       <div class="origin-founder-line"></div>
-      <span style="font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold-dim);">Jack Hovsepian &mdash; Founder, DANHOV &mdash; Est. 1984</span>
+      <span style="font-family:'Cinzel',serif; font-size:clamp(13px,1.6vw,18px); letter-spacing:0.25em; text-transform:uppercase; color:var(--logo-red);">Jack Hovsepian &mdash; Founder, DANHOV &mdash; Est. 1984</span>
       <div class="origin-founder-line"></div>
     </div>
   </div>
