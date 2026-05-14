@@ -110,6 +110,97 @@
   }
   .nav-cta:hover { background: var(--logo-red-dark); }
 
+  /* ── MEGA MENU ── */
+  .nav-links > li { position: static; }
+  .mega-menu {
+    position: fixed;
+    top: 81px; left: 0; right: 0;
+    background: #fff8f6;
+    border-top: 2px solid var(--logo-red);
+    box-shadow: 0 20px 60px rgba(61,37,32,0.14);
+    padding: 44px 80px 52px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.22s ease, visibility 0.22s, transform 0.22s ease;
+    display: flex;
+    gap: 0;
+  }
+  .nav-links > li:hover > .mega-menu {
+    opacity: 1; visibility: visible; transform: translateY(0);
+  }
+  .mega-overlay {
+    position: fixed;
+    top: 81px; left: 0; right: 0; bottom: 0;
+    background: rgba(61,37,32,0.22);
+    z-index: 98;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.22s ease, visibility 0.22s;
+    pointer-events: none;
+  }
+  nav:has(li:hover > .mega-menu) + .mega-overlay {
+    opacity: 1; visibility: visible;
+  }
+  /* mega menu sections */
+  .mm-col { flex: 1; padding: 0 32px; border-right: 1px solid rgba(172,52,56,0.08); }
+  .mm-col:first-child { padding-left: 0; }
+  .mm-col:last-child { border-right: none; padding-right: 0; }
+  .mm-col-wide { flex: 2; }
+  .mm-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--logo-red); margin-bottom: 22px; display: block;
+  }
+  .mm-grid { display: grid; gap: 12px; }
+  .mm-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .mm-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .mm-grid-5 { grid-template-columns: repeat(5, 1fr); }
+  .mm-card { text-decoration: none; display: flex; flex-direction: column; gap: 8px; }
+  .mm-card-img {
+    background: linear-gradient(135deg, #f0e4e0 0%, #e4d0cc 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s;
+  }
+  .mm-card-img svg { opacity: 0.25; transition: opacity 0.3s; }
+  .mm-card:hover .mm-card-img { background: linear-gradient(135deg, #e8d4d0 0%, #d8beba 100%); }
+  .mm-card:hover .mm-card-img svg { opacity: 0.45; }
+  .mm-card-img-lg { height: 140px; }
+  .mm-card-img-sm { height: 96px; }
+  .mm-card-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em; color: var(--cream);
+    transition: color 0.2s; text-transform: uppercase;
+  }
+  .mm-card:hover .mm-card-name { color: var(--logo-red); }
+  .mm-metals { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  .mm-metal {
+    display: flex; align-items: center; gap: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
+    color: var(--cream); text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid rgba(172,52,56,0.2);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .mm-metal:hover { border-color: var(--logo-red); color: var(--logo-red); }
+  .mm-metal-swatch { width: 14px; height: 14px; border-radius: 50%; }
+  .mm-explore {
+    display: inline-block; margin-top: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--logo-red); text-decoration: none;
+    border-bottom: 1px solid var(--logo-red);
+    padding-bottom: 2px; transition: opacity 0.2s;
+  }
+  .mm-explore:hover { opacity: 0.7; }
+  /* ring placeholder svg */
+  .mm-ring-svg { width: 36px; height: 36px; }
+
   /* CINEMATIC HERO */
   .cinematic-hero { text-align: center; margin: 40px 0 48px; }
   .ch-line { display: block; opacity: 0; transform: translateY(16px); transition: opacity 1.4s ease, transform 1.4s ease; }
@@ -1607,10 +1698,92 @@
 <nav>
   <a href="#" class="nav-logo"><img src="danhov-logo-transparent.png" alt="DANHOV"></a>
   <ul class="nav-links">
-    <li><a href="#">Engagement Rings</a></li>
-    <li><a href="#">Wedding Bands</a></li>
-    <li><a href="#">Fine Jewelry</a></li>
-    <li><a href="#">Men's</a></li>
+
+    <!-- Engagement Rings -->
+    <li>
+      <a href="#">Engagement Rings</a>
+      <div class="mega-menu">
+        <div class="mm-col mm-col-wide">
+          <span class="mm-label">Collections</span>
+          <div class="mm-grid mm-grid-5">
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Abbraccio</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Carezza</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Classico</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Couture</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Eleganza</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Per Lei</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Petalo</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Solo Filo</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Unito</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><svg class="mm-ring-svg" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Voltaggio</span></a>
+          </div>
+          <a href="#" class="mm-explore">Explore All Engagement Rings &rarr;</a>
+        </div>
+        <div class="mm-col" style="flex:0 0 220px;">
+          <span class="mm-label">Shop by Metal</span>
+          <div class="mm-metals" style="flex-direction:column;">
+            <a href="#" class="mm-metal"><span class="mm-metal-swatch" style="background:#e8e0d8; border:1px solid #ccc;"></span>White Gold</a>
+            <a href="#" class="mm-metal"><span class="mm-metal-swatch" style="background:#d4a853;"></span>Yellow Gold</a>
+            <a href="#" class="mm-metal"><span class="mm-metal-swatch" style="background:#e8a090;"></span>Rose Gold</a>
+          </div>
+          <div style="margin-top:32px;">
+            <span class="mm-label">Award Winners</span>
+            <div class="mm-card-img mm-card-img-lg" style="border-radius:2px;"><svg class="mm-ring-svg" style="width:56px;height:56px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- Wedding Bands -->
+    <li>
+      <a href="#">Wedding Bands</a>
+      <div class="mega-menu">
+        <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
+          <span class="mm-label">Shop by Category</span>
+          <div class="mm-grid mm-grid-3" style="max-width:700px;">
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Award Winners</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="22" rx="12" ry="5" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Her Bands</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="22" rx="12" ry="5" stroke="#AC3438" stroke-width="2"/></svg></div><span class="mm-card-name">His Bands</span></a>
+          </div>
+          <a href="#" class="mm-explore">View All Wedding Bands &rarr;</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Fine Jewelry -->
+    <li>
+      <a href="#">Fine Jewelry</a>
+      <div class="mega-menu">
+        <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
+          <span class="mm-label">Shop by Category</span>
+          <div class="mm-grid mm-grid-3" style="max-width:700px;">
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="22" rx="12" ry="5" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Bands</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="14" r="5" stroke="#AC3438" stroke-width="1.5"/><line x1="18" y1="19" x2="18" y2="30" stroke="#AC3438" stroke-width="1.5"/><path d="M14 30 Q18 28 22 30" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Earrings</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><path d="M18 8 L20 14 L18 12 L16 14 Z" stroke="#AC3438" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="7" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Pendants</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="1.5"/><path d="M13 16 L15 10 L18 13 L21 10 L23 16" stroke="#AC3438" stroke-width="1.2" fill="none"/></svg></div><span class="mm-card-name">Rings</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="8" stroke="#AC3438" stroke-width="1.5"/><circle cx="18" cy="18" r="4" stroke="#AC3438" stroke-width="1"/></svg></div><span class="mm-card-name">Pop of Color</span></a>
+          </div>
+          <a href="#" class="mm-explore">Explore All Fine Jewelry &rarr;</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Men's -->
+    <li>
+      <a href="#">Men's</a>
+      <div class="mega-menu">
+        <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
+          <span class="mm-label">Shop Men's</span>
+          <div class="mm-grid mm-grid-3" style="max-width:700px;">
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="22" r="10" stroke="#AC3438" stroke-width="2"/></svg></div><span class="mm-card-name">Rings</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><path d="M6 18 Q10 14 18 16 Q26 18 30 14" stroke="#AC3438" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M6 22 Q10 18 18 20 Q26 22 30 18" stroke="#AC3438" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div><span class="mm-card-name">Bracelets</span></a>
+            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><svg class="mm-ring-svg" style="width:48px;height:48px;" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="10" r="4" stroke="#AC3438" stroke-width="1.5"/><line x1="18" y1="14" x2="18" y2="30" stroke="#AC3438" stroke-width="1.5"/></svg></div><span class="mm-card-name">Necklaces &amp; Pendants</span></a>
+          </div>
+          <a href="#" class="mm-explore">Explore All Men's &rarr;</a>
+        </div>
+      </div>
+    </li>
+
     <li><a href="#">Ring Builder</a></li>
     <li><a href="#">Philosophy</a></li>
   </ul>
@@ -1618,6 +1791,7 @@
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:9px;margin-top:-2px;"><path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" fill="currentColor"/><path d="M19 16L19.75 18.25L22 19L19.75 19.75L19 22L18.25 19.75L16 19L18.25 18.25L19 16Z" fill="currentColor" opacity="0.7"/><path d="M5 3L5.5 4.5L7 5L5.5 5.5L5 7L4.5 5.5L3 5L4.5 4.5L5 3Z" fill="currentColor" opacity="0.5"/></svg>Build Your Ring
   </a>
 </nav>
+<div class="mega-overlay"></div>
 
 <!-- HERO &mdash; CINEMATIC ORIGIN -->
 <section class="hero">
