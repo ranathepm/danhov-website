@@ -487,13 +487,15 @@
     animation: marquee 20s linear infinite;
   }
   .featured-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    letter-spacing: 0.15em;
-    color: var(--grey);
+    display: flex;
+    align-items: center;
     white-space: nowrap;
-    transition: color 0.3s;
+    flex-shrink: 0;
+    opacity: 0.65;
+    transition: opacity 0.3s;
   }
+  .featured-logo:hover { opacity: 1; }
+  .featured-logo svg { display: block; }
   .featured-logo:hover { color: var(--cream); }
   @keyframes marquee {
     from { transform: translateX(0); }
@@ -1417,12 +1419,12 @@
   .selflove-words {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(80px, 18vw, 220px);
-    font-weight: 400;
+    font-weight: 600;
     line-height: 0.9;
-    color: var(--cream);
+    color: var(--logo-red);
     position: relative;
   }
-  .selflove-words em { font-style: italic; color: var(--crimson-bright); }
+  .selflove-words em { font-style: italic; color: var(--logo-red); }
   .selflove-sub {
     margin-top: 48px;
     font-family: 'Cinzel', serif;
@@ -1748,18 +1750,25 @@
   <span class="featured-label">As Seen In</span>
   <div class="featured-divider"></div>
   <div class="featured-logos">
-    <span class="featured-logo">VOGUE</span>
-    <span class="featured-logo">Harper's BAZAAR</span>
-    <span class="featured-logo">WWD</span>
-    <span class="featured-logo">BRIDES</span>
-    <span class="featured-logo">Who What Wear</span>
-    <span class="featured-logo">Town & Country</span>
-    <span class="featured-logo">VOGUE</span>
-    <span class="featured-logo">Harper's BAZAAR</span>
-    <span class="featured-logo">WWD</span>
-    <span class="featured-logo">BRIDES</span>
-    <span class="featured-logo">Who What Wear</span>
-    <span class="featured-logo">Town & Country</span>
+    <!-- VOGUE -->
+    <span class="featured-logo"><svg height="28" viewBox="0 0 136 28" xmlns="http://www.w3.org/2000/svg"><text y="24" font-family="'Playfair Display',serif" font-size="25" font-weight="800" fill="#7a5c58" letter-spacing="6">VOGUE</text></svg></span>
+    <!-- Harper's BAZAAR -->
+    <span class="featured-logo"><svg height="42" viewBox="0 0 138 42" xmlns="http://www.w3.org/2000/svg"><text y="14" font-family="'Montserrat',sans-serif" font-size="9" font-weight="500" fill="#7a5c58" letter-spacing="3.5">HARPER'S</text><text y="38" font-family="'Playfair Display',serif" font-size="22" font-weight="700" fill="#7a5c58" letter-spacing="1">BAZAAR</text></svg></span>
+    <!-- WWD -->
+    <span class="featured-logo"><svg height="28" viewBox="0 0 76 28" xmlns="http://www.w3.org/2000/svg"><text y="24" font-family="'Playfair Display',serif" font-size="26" font-weight="800" fill="#7a5c58" letter-spacing="2">WWD</text></svg></span>
+    <!-- BRIDES -->
+    <span class="featured-logo"><svg height="32" viewBox="0 0 118 32" xmlns="http://www.w3.org/2000/svg"><text y="26" font-family="'Cormorant Garamond',serif" font-size="28" font-weight="600" font-style="italic" fill="#7a5c58" letter-spacing="3">Brides</text></svg></span>
+    <!-- Who What Wear -->
+    <span class="featured-logo"><svg height="34" viewBox="0 0 148 34" xmlns="http://www.w3.org/2000/svg"><text y="14" font-family="'Montserrat',sans-serif" font-size="10" font-weight="600" fill="#7a5c58" letter-spacing="2">WHO WHAT</text><text y="30" font-family="'Montserrat',sans-serif" font-size="10" font-weight="600" fill="#7a5c58" letter-spacing="9.5">WEAR</text></svg></span>
+    <!-- Town & Country -->
+    <span class="featured-logo"><svg height="36" viewBox="0 0 130 36" xmlns="http://www.w3.org/2000/svg"><text y="15" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="600" fill="#7a5c58" letter-spacing="3">TOWN &amp;</text><text y="34" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="600" fill="#7a5c58" letter-spacing="1">COUNTRY</text></svg></span>
+    <!-- repeat for seamless loop -->
+    <span class="featured-logo"><svg height="28" viewBox="0 0 136 28" xmlns="http://www.w3.org/2000/svg"><text y="24" font-family="'Playfair Display',serif" font-size="25" font-weight="800" fill="#7a5c58" letter-spacing="6">VOGUE</text></svg></span>
+    <span class="featured-logo"><svg height="42" viewBox="0 0 138 42" xmlns="http://www.w3.org/2000/svg"><text y="14" font-family="'Montserrat',sans-serif" font-size="9" font-weight="500" fill="#7a5c58" letter-spacing="3.5">HARPER'S</text><text y="38" font-family="'Playfair Display',serif" font-size="22" font-weight="700" fill="#7a5c58" letter-spacing="1">BAZAAR</text></svg></span>
+    <span class="featured-logo"><svg height="28" viewBox="0 0 76 28" xmlns="http://www.w3.org/2000/svg"><text y="24" font-family="'Playfair Display',serif" font-size="26" font-weight="800" fill="#7a5c58" letter-spacing="2">WWD</text></svg></span>
+    <span class="featured-logo"><svg height="32" viewBox="0 0 118 32" xmlns="http://www.w3.org/2000/svg"><text y="26" font-family="'Cormorant Garamond',serif" font-size="28" font-weight="600" font-style="italic" fill="#7a5c58" letter-spacing="3">Brides</text></svg></span>
+    <span class="featured-logo"><svg height="34" viewBox="0 0 148 34" xmlns="http://www.w3.org/2000/svg"><text y="14" font-family="'Montserrat',sans-serif" font-size="10" font-weight="600" fill="#7a5c58" letter-spacing="2">WHO WHAT</text><text y="30" font-family="'Montserrat',sans-serif" font-size="10" font-weight="600" fill="#7a5c58" letter-spacing="9.5">WEAR</text></svg></span>
+    <span class="featured-logo"><svg height="36" viewBox="0 0 130 36" xmlns="http://www.w3.org/2000/svg"><text y="15" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="600" fill="#7a5c58" letter-spacing="3">TOWN &amp;</text><text y="34" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="600" fill="#7a5c58" letter-spacing="1">COUNTRY</text></svg></span>
   </div>
 </div>
 
