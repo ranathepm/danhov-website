@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANHOV &mdash; Oneness</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --black: #fff8f6;
+    --deep: #fdf0ed;
+    --gold: #9b6b4a;
+    --gold-light: #c4916e;
+    --gold-dim: #c9a898;
+    --crimson: #b5606a;
+    --crimson-bright: #b5606a;
+    --blush: #e8b4bc;
+    --cream: #3d2520;
+    --grey: #7a5c58;
+    --white: #fff8f6;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease;
+    mix-blend-mode: difference;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 48px;
+    background: linear-gradient(to bottom, rgba(255,248,246,0.97) 0%, rgba(255,248,246,0.0) 100%);
+  }
+  .nav-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .nav-links a:hover { opacity: 1; color: var(--gold); }
+  .nav-cta {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff8f6;
+    background: var(--gold);
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* CINEMATIC HERO */
+  .cinematic-hero { text-align: center; margin: 40px 0 48px; }
+  .ch-line { display: block; opacity: 0; transform: translateY(16px); transition: opacity 1.4s ease, transform 1.4s ease; }
+  .ch-line.visible { opacity: 1; transform: translateY(0); }
+  .ch-silence { font-family: 'Cinzel', serif; font-size: clamp(13px, 1.8vw, 22px); letter-spacing: 0.6em; text-transform: uppercase; color: var(--grey); margin-bottom: 0.6em; }
+  .ch-realized { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 72px); font-weight: 300; color: var(--cream); font-style: italic; line-height: 1.1; }
+  .ch-oneness { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 120px); font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 0.3em; }
+  .ch-divider { width: 0; height: 1px; background: var(--gold); margin: 32px auto; transition: width 1.2s ease; }
+  .ch-divider.visible { width: 60px; }
+  .ch-ring { font-family: 'Cinzel', serif; font-size: clamp(18px, 2.8vw, 42px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3em; }
+  .ch-messaged { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4.5vw, 64px); font-weight: 300; font-style: italic; color: var(--crimson-bright); line-height: 1.1; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Animated cosmos background */
+  .cosmos {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(229,160,170,0.25) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 30%, rgba(197,155,130,0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(229,160,170,0.12) 0%, transparent 40%),
+                var(--black);
+  }
+
+  /* Stars */
+  .stars {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    width: 1px; height: 1px;
+    background: #c9a0ac;
+    border-radius: 50%;
+    animation: twinkle var(--dur) ease-in-out infinite alternate;
+  }
+
+  @keyframes twinkle {
+    from { opacity: var(--min-op); transform: scale(1); }
+    to { opacity: 1; transform: scale(2); }
+  }
+
+  /* Sacred geometry spiral */
+  .spiral-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.12;
+  }
+  .spiral-svg {
+    width: 90vmin;
+    height: 90vmin;
+    animation: cosmicSpin 80s linear infinite;
+  }
+  @keyframes cosmicSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0;
+    animation: fadeUp 1.2s ease 0.3s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 88px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--cream);
+    margin: 16px 0 0;
+    opacity: 0;
+    animation: fadeUp 1.4s ease 0.6s forwards;
+  }
+  .hero-title .saw { font-style: italic; color: var(--gold); }
+  .hero-title .silence {
+    display: block;
+    font-size: clamp(18px, 2.5vw, 38px);
+    letter-spacing: 0.35em;
+    color: var(--grey);
+    font-style: normal;
+    text-transform: uppercase;
+    margin-bottom: 0.3em;
+  }
+  .hero-title .formed {
+    display: block;
+    font-style: italic;
+    font-size: clamp(28px, 4.5vw, 68px);
+    color: var(--gold);
+    margin: 0.2em 0;
+  }
+  .hero-title .woke {
+    display: block;
+    font-size: clamp(22px, 3.5vw, 52px);
+    color: var(--grey);
+    font-style: normal;
+    letter-spacing: 0.2em;
+    margin: 0.4em 0;
+  }
+  .hero-title .form {
+    display: block;
+    font-style: italic;
+    color: var(--crimson-bright);
+    font-size: clamp(40px, 7vw, 100px);
+  }
+
+  .hero-divider {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    margin: 40px auto;
+    opacity: 0;
+    animation: fadeUp 1s ease 1s forwards;
+  }
+
+  .hero-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--grey);
+    opacity: 0;
+    animation: fadeUp 1s ease 1.2s forwards;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeIn 1s ease 2s forwards;
+  }
+  .hero-scroll span {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+  .scroll-line {
+    width: 1px;
+    height: 48px;
+    background: var(--gold);
+    animation: scrollPulse 2s ease-in-out infinite;
+    transform-origin: top;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(1); opacity: 0.5; }
+    50% { transform: scaleY(0.3); opacity: 1; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.7; }
+  }
+
+  /* VIDEO PLACEHOLDER */
+  .video-section {
+    position: relative;
+    height: 70vh;
+    background: var(--deep);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at center, rgba(181,96,106,0.18) 0%, transparent 70%),
+      repeating-conic-gradient(rgba(197,155,130,0.06) 0deg, transparent 1deg, transparent 5deg);
+    animation: cosmicSpin 30s linear infinite;
+  }
+  .video-placeholder {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  .video-icon {
+    width: 80px; height: 80px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .video-icon:hover { background: rgba(201,168,76,0.1); transform: scale(1.1); }
+  .video-icon svg { fill: var(--gold); margin-left: 4px; }
+  .video-label {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .video-caption {
+    margin-top: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: var(--cream);
+    opacity: 0.7;
+  }
+  .video-note {
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--grey);
+    letter-spacing: 0.1em;
+  }
+
+  /* SPIRAL PHILOSOPHY */
+  .spiral-section {
+    padding: 140px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .spiral-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(229,160,170,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .section-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--cream);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-body {
+    max-width: 560px;
+    margin: 32px auto 0;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--grey);
+    letter-spacing: 0.03em;
+  }
+
+  .spiral-triad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 80px auto 0;
+    max-width: 900px;
+  }
+  .triad-item {
+    background: #f7ebe8;
+    padding: 56px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s;
+  }
+  .triad-item:hover { transform: translateY(-4px); }
+  .triad-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+  }
+  .triad-item:hover::before { transform: scaleX(1); }
+  .triad-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .triad-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .triad-body {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--grey);
+  }
+
+  /* FEATURED IN */
+  .featured-section {
+    border-top: 1px solid rgba(181,96,106,0.15);
+    border-bottom: 1px solid rgba(181,96,106,0.15);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    overflow: hidden;
+    background: #f7ebe8;
+  }
+  .featured-label {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .featured-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--gold-dim);
+    flex-shrink: 0;
+  }
+  .featured-logos {
+    display: flex;
+    gap: 56px;
+    align-items: center;
+    animation: marquee 20s linear infinite;
+  }
+  .featured-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: var(--grey);
+    white-space: nowrap;
+    transition: color 0.3s;
+  }
+  .featured-logo:hover { color: var(--cream); }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* SPIRITUAL MESSAGES */
+  .messages-section {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .messages-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 60px,
+      rgba(181,96,106,0.04) 60px,
+      rgba(181,96,106,0.04) 61px
+    );
+  }
+  .messages-header {
+    text-align: center;
+    padding: 0 48px 80px;
+  }
+  .message-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(181,96,106,0.08);
+  }
+  .message-card {
+    background: var(--black);
+    padding: 64px 72px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s;
+    border: 1px solid rgba(181,96,106,0.08);
+  }
+  .message-card:hover { background: var(--deep); }
+  .message-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 600;
+    color: var(--crimson);
+    opacity: 0.12;
+    position: absolute;
+    top: 20px; right: 40px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .message-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+  .message-bar {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 16px;
+  }
+  .message-note {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--grey);
+    line-height: 1.7;
+  }
+
+  /* MARQUEE QUOTE */
+  .marquee-quote {
+    padding: 64px 0;
+    background: #b5606a;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee-inner {
+    display: flex;
+    animation: marqueeQ 25s linear infinite;
+    white-space: nowrap;
+  }
+  .marquee-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    padding-right: 80px;
+    letter-spacing: 0.05em;
+  }
+  .marquee-text span { color: rgba(255,255,255,0.4); padding: 0 20px; }
+  @keyframes marqueeQ {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* RING SHOWCASE */
+  .ring-section {
+    padding: 140px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .ring-visual {
+    position: relative;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Animated concentric rings */
+  .ring-orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid;
+    animation: orbit linear infinite;
+  }
+  .ring-orbit:nth-child(1) { width: 92%; height: 92%; border-color: rgba(201,168,76,0.12); animation-duration: 40s; }
+  .ring-orbit:nth-child(2) { width: 76%; height: 76%; border-color: rgba(139,26,26,0.2); animation-duration: 28s; animation-direction: reverse; }
+  .ring-orbit:nth-child(3) { width: 58%; height: 58%; border-color: rgba(201,168,76,0.18); animation-duration: 18s; }
+  .ring-orbit:nth-child(4) { width: 40%; height: 40%; border-color: rgba(201,168,76,0.25); animation-duration: 10s; animation-direction: reverse; }
+
+  @keyframes orbit { to { transform: rotate(360deg); } }
+
+  .ring-placeholder {
+    width: 55%;
+    aspect-ratio: 1;
+    background: #f7ebe8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+    border: 1px dashed rgba(201,168,76,0.2);
+  }
+
+  .ring-content { }
+  .ring-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 24px;
+  }
+  .ring-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+  .ring-title em { font-style: italic; color: var(--gold); }
+  .ring-body {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--grey);
+    margin-bottom: 40px;
+  }
+  .ring-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .ring-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--crimson-bright);
+    display: block;
+  }
+  .ring-stat-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--grey);
+    text-transform: uppercase;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 16px 40px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+  .btn-solid {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--crimson);
+    color: #fff8f6;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-left: 16px;
+  }
+  .btn-solid:hover { background: var(--crimson-bright); }
+
+  /* COLLECTIONS GRID */
+  .collections-section {
+    padding: 120px 48px;
+    background: #f7ebe8;
+  }
+  .collections-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .collection-card {
+    position: relative;
+    aspect-ratio: 0.7;
+    background: #f0e0dc;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+  }
+  .collection-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,8,6,0.9) 0%, transparent 50%);
+    z-index: 1;
+  }
+  .collection-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    opacity: 0.15;
+    transition: transform 0.6s, opacity 0.4s;
+  }
+  .collection-card:hover .collection-bg { transform: scale(1.1); opacity: 0.22; }
+  .collection-card:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    animation: slideIn 0.3s ease forwards;
+  }
+  @keyframes slideIn {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  .collection-info {
+    position: relative;
+    z-index: 2;
+  }
+  .collection-name {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .collection-count {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  /* DIAMOND SHAPES */
+  .shapes-section {
+    padding: 120px 48px;
+  }
+  .shapes-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .shapes-scroll {
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 8px;
+  }
+  .shapes-scroll::-webkit-scrollbar { display: none; }
+  .shape-item {
+    flex-shrink: 0;
+    width: 140px;
+    padding: 32px 16px;
+    background: #f7ebe8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  .shape-item:hover { background: rgba(201,168,76,0.05); border-bottom-color: var(--gold); }
+  .shape-svg { width: 48px; height: 48px; }
+  .shape-name {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--grey);
+    text-align: center;
+  }
+
+  /* BIG QUOTE */
+  .big-quote {
+    padding: 160px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .big-quote::before {
+    content: '"';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 300px;
+    color: var(--crimson);
+    opacity: 0.07;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .big-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 72px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.25;
+    color: var(--cream);
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .big-quote-text em { color: var(--gold); font-style: normal; }
+  .big-quote-author {
+    margin-top: 32px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* APPOINTMENT */
+  .appointment-section {
+    padding: 100px 48px;
+    background: var(--deep);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .appt-left .section-eyebrow { text-align: left; }
+  .appt-left .section-title { font-size: 40px; text-align: left; max-width: none; }
+  .appt-left .section-body { text-align: left; margin: 24px 0; max-width: none; }
+  .appt-features { list-style: none; margin-bottom: 40px; display: flex; flex-direction: column; gap: 12px; }
+  .appt-features li {
+    font-size: 13px;
+    color: var(--grey);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .appt-features li::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .appt-right {
+    background: #fff8f6;
+    padding: 48px;
+    border: 1px solid rgba(181,96,106,0.15);
+  }
+  .appt-form-title {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .appt-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 12px 0;
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .appt-input:focus { border-bottom-color: var(--gold); }
+  .appt-input::placeholder { color: var(--grey); font-size: 12px; letter-spacing: 0.1em; }
+  .appt-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--gold);
+    color: #fff8f6;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .appt-btn:hover { background: var(--gold-light); }
+
+  /* GALLERY */
+  .gallery-section {
+    padding: 80px 0;
+    overflow: hidden;
+  }
+  .gallery-header {
+    text-align: center;
+    padding: 0 48px 64px;
+  }
+  .gallery-strip {
+    display: flex;
+    gap: 2px;
+    animation: galleryScroll 30s linear infinite;
+    width: max-content;
+  }
+  .gallery-item {
+    width: 280px;
+    height: 360px;
+    background: #f0e0dc;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .gallery-item::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(10,8,6,0.9) 0%, transparent 100%);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  @keyframes galleryScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* SUSTAINABILITY */
+  .sustain-section {
+    padding: 140px 48px;
+    background: #f7ebe8;
+    text-align: center;
+  }
+  .sustain-badge {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    padding: 12px 32px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .sustain-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    max-width: 1000px;
+    margin: 64px auto 0;
+  }
+  .pillar {
+    background: #fff8f6;
+    padding: 48px 32px;
+    text-align: center;
+  }
+  .pillar-icon { font-size: 36px; margin-bottom: 20px; display: block; }
+  .pillar-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .pillar-body { font-size: 12px; color: var(--grey); line-height: 1.8; }
+
+  /* NEWSLETTER */
+  .newsletter-section {
+    padding: 120px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .newsletter-section::before {
+    content: 'ONE';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 300px;
+    font-weight: 600;
+    color: var(--crimson);
+    opacity: 0.06;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .newsletter-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 300;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+  .newsletter-title em { font-style: italic; color: var(--gold); }
+  .newsletter-sub {
+    font-size: 13px;
+    color: var(--grey);
+    letter-spacing: 0.1em;
+    margin-bottom: 48px;
+  }
+  .newsletter-form {
+    display: flex;
+    max-width: 480px;
+    margin: 0 auto;
+    gap: 0;
+  }
+  .newsletter-input {
+    flex: 1;
+    background: #f7ebe8;
+    border: 1px solid rgba(181,96,106,0.2);
+    border-right: none;
+    padding: 16px 24px;
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    outline: none;
+  }
+  .newsletter-input::placeholder { color: var(--grey); }
+  .newsletter-btn {
+    padding: 16px 32px;
+    background: var(--gold);
+    color: #fff8f6;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .newsletter-btn:hover { background: var(--gold-light); }
+
+  /* FOOTER */
+  footer {
+    background: #f0e0dc;
+    border-top: 1px solid rgba(181,96,106,0.15);
+    padding: 80px 48px 40px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  .footer-brand-name {
+    margin-bottom: 16px;
+    display: block;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--grey);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .footer-contact {
+    font-size: 12px;
+    color: var(--grey);
+    line-height: 2;
+  }
+  .footer-col-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a {
+    font-size: 12px;
+    color: var(--grey);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    border-top: 1px solid rgba(181,96,106,0.1);
+  }
+  .footer-copy { font-size: 11px; color: var(--grey); letter-spacing: 0.05em; }
+  /* DAILY TRUTH */
+  .daily-truth {
+    padding: 80px 48px;
+    background: #f7ebe8;
+    text-align: center;
+    border-top: 1px solid rgba(181,96,106,0.15);
+    border-bottom: 1px solid rgba(181,96,106,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .daily-truth::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(181,96,106,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .daily-truth-inner {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .daily-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.6em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 32px;
+  }
+  .daily-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 5vw, 64px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.2;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  .daily-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .daily-date {
+    margin-top: 24px;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--grey);
+    text-transform: uppercase;
+  }
+
+  /* GIFT MOMENT */
+  .gift-moment {
+    padding: 140px 48px;
+    background: #f0e0dc;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .gift-moment::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(181,96,106,0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .gift-inner { position: relative; max-width: 600px; margin: 0 auto; }
+  .gift-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.6em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 56px;
+  }
+  .gift-card {
+    border: 1px solid rgba(181,96,106,0.2);
+    padding: 2px;
+    margin-bottom: 48px;
+    background: #fff8f6;
+    box-shadow: 0 0 80px rgba(181,96,106,0.06);
+  }
+  .gift-card-inner { border: 1px solid rgba(181,96,106,0.08); padding: 64px 48px; }
+  .gift-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .gift-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .gift-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    color: var(--grey);
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+  .gift-rule { width: 32px; height: 1px; background: var(--gold); margin: 0 auto 24px; }
+  .gift-from {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--grey);
+  }
+  .gift-note { font-size: 13px; line-height: 1.9; color: var(--grey); margin-bottom: 40px; letter-spacing: 0.04em; }
+
+  /* 12 INCHES CINEMATIC MOMENT */
+  .inches-moment {
+    padding: 160px 48px;
+    background: #f0e0dc;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .inches-moment::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(229,160,170,0.2) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 50%, rgba(197,155,130,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .inches-bg-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(160px, 30vw, 380px);
+    font-weight: 600;
+    line-height: 0.85;
+    color: var(--crimson);
+    opacity: 0.07;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .inches-unit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(56px, 10vw, 140px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--crimson-bright);
+    line-height: 1;
+    position: relative;
+  }
+  .inches-divider {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    margin: 40px auto;
+  }
+  .inches-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3.5vw, 48px);
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .inches-truth {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(11px, 1.5vw, 16px);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    position: relative;
+  }
+
+  /* NEVER ALONE PAIRED MOMENT */
+  .neveralone-moment {
+    padding: 140px 48px;
+    background: #f7ebe8;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .neveralone-moment::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(229,160,170,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .neveralone-inner { position: relative; max-width: 760px; margin: 0 auto; }
+  .neveralone-line-1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 80px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+  .neveralone-divider {
+    width: 1px; height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    margin: 0 auto 32px;
+  }
+  .neveralone-line-2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 3vw, 36px);
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.4;
+    margin-bottom: 40px;
+  }
+  .neveralone-line-3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4.5vw, 60px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.1;
+    margin-bottom: 56px;
+  }
+  .neveralone-cta { }
+
+  /* SELF LOVE STANDALONE MOMENT */
+  .selflove-moment {
+    padding: 160px 48px;
+    text-align: center;
+    background: #fff8f6;
+    position: relative;
+    overflow: hidden;
+  }
+  .selflove-moment::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(229,160,170,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .selflove-words {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(80px, 18vw, 220px);
+    font-weight: 300;
+    line-height: 0.9;
+    color: var(--cream);
+    position: relative;
+  }
+  .selflove-words em { font-style: italic; color: var(--crimson-bright); }
+  .selflove-sub {
+    margin-top: 48px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gold);
+    position: relative;
+  }
+
+  /* SELF LOVE RINGS SECTION */
+  .selflove-section { padding: 120px 48px; background: #f7ebe8; }
+  .selflove-header { text-align: center; margin-bottom: 72px; }
+  .selflove-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 2px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: end;
+  }
+  .selflove-card { background: #fff8f6; overflow: hidden; transition: transform 0.4s; }
+  .selflove-card:hover { transform: translateY(-6px); }
+  .selflove-card-featured { transform: translateY(-24px); }
+  .selflove-card-featured:hover { transform: translateY(-30px); }
+  .selflove-card-img {
+    height: 320px;
+    background: rgba(181,96,106,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(181,96,106,0.08);
+  }
+  .selflove-card-body { padding: 28px 32px 32px; }
+  .selflove-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+  .selflove-card-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold);
+    line-height: 1.5;
+  }
+
+  .footer-final-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  /* ORIGIN STORY */
+  .origin-section {
+    padding: 160px 48px;
+    background: #f0e0dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .origin-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(229,160,170,0.25) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 50%, rgba(197,155,130,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .origin-section::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 10%; right: 10%; bottom: 0;
+    border-left: 1px solid rgba(181,96,106,0.1);
+    border-right: 1px solid rgba(181,96,106,0.1);
+    pointer-events: none;
+  }
+  .origin-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+  }
+  .origin-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.6em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 64px;
+  }
+  .origin-lines {
+    margin-bottom: 64px;
+  }
+  .origin-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 7vw, 96px);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--cream);
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: originReveal 1s ease forwards;
+  }
+  .origin-line-2 {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .origin-line-gap {
+    margin-top: 0.5em;
+    font-size: clamp(28px, 4vw, 56px);
+    color: var(--grey);
+    letter-spacing: 0.15em;
+  }
+  .origin-line-3 {
+    margin-top: 0.4em;
+  }
+  .origin-line-4 {
+    font-style: italic;
+    color: var(--crimson-bright);
+  }
+  @keyframes originReveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .origin-rule {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 40px;
+  }
+  .origin-note {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--grey);
+    letter-spacing: 0.06em;
+    max-width: 520px;
+    margin: 0 auto 48px;
+  }
+  .origin-founder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .origin-founder-line {
+    width: 40px;
+    height: 1px;
+    background: rgba(181,96,106,0.35);
+  }
+  .origin-founder span {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+</style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><img src="danhov-logo-transparent.png" alt="DANHOV"></a>
+  <ul class="nav-links">
+    <li><a href="#">Engagement Rings</a></li>
+    <li><a href="#">Wedding Bands</a></li>
+    <li><a href="#">Fine Jewelry</a></li>
+    <li><a href="#">Men's</a></li>
+    <li><a href="#">Ring Builder</a></li>
+    <li><a href="#">Philosophy</a></li>
+  </ul>
+  <a href="#" class="nav-cta">Build Your Ring</a>
+</nav>
+
+<!-- HERO &mdash; CINEMATIC ORIGIN -->
+<section class="hero">
+  <div class="cosmos"></div>
+  <div class="stars" id="stars"></div>
+  <div class="spiral-container">
+    <svg class="spiral-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="300" cy="300" r="280" stroke="#c9a0ac" stroke-width="0.5" opacity="0.6"/>
+      <circle cx="300" cy="300" r="230" stroke="#e8b4bc" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="300" cy="300" r="180" stroke="#c9a0ac" stroke-width="0.5" opacity="0.6"/>
+      <circle cx="300" cy="300" r="130" stroke="#e8b4bc" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="300" cy="300" r="90" stroke="#c9a0ac" stroke-width="0.5" opacity="0.6"/>
+      <circle cx="300" cy="300" r="55" stroke="#e8b4bc" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="300" cy="300" r="28" stroke="#c9a0ac" stroke-width="0.5" opacity="0.6"/>
+      <line x1="300" y1="20" x2="300" y2="580" stroke="#c9a0ac" stroke-width="0.3" opacity="0.3"/>
+      <line x1="20" y1="300" x2="580" y2="300" stroke="#c9a0ac" stroke-width="0.3" opacity="0.3"/>
+      <line x1="102" y1="102" x2="498" y2="498" stroke="#c9a0ac" stroke-width="0.3" opacity="0.2"/>
+      <line x1="498" y1="102" x2="102" y2="498" stroke="#c9a0ac" stroke-width="0.3" opacity="0.2"/>
+      <polygon points="300,30 545,165 545,435 300,570 55,435 55,165" stroke="#e8b4bc" stroke-width="0.4" fill="none" opacity="0.3"/>
+      <polygon points="300,90 490,200 490,400 300,510 110,400 110,200" stroke="#c9a0ac" stroke-width="0.3" fill="none" opacity="0.2"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow" style="opacity:0; animation: fadeIn 1s ease 0.2s forwards;">DANHOV &mdash; Est. 1984 &mdash; The Oneness Collection</span>
+
+    <div class="cinematic-hero">
+      <div class="ch-line ch-silence" id="chLine1">In silence</div>
+      <div class="ch-line ch-realized" id="chLine2">I realized</div>
+      <div class="ch-line ch-oneness" id="chLine3">the oneness of the universe.</div>
+      <div class="ch-divider" id="chDiv"></div>
+      <div class="ch-line ch-ring" id="chLine4">The Swirl Love Ring</div>
+      <div class="ch-line ch-messaged" id="chLine5">was messaged.</div>
+    </div>
+
+    <div class="origin-founder" id="heroFounder" style="opacity:0;">
+      <div class="origin-founder-line"></div>
+      <span style="font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold-dim);">Jack Hovsepian &mdash; Founder, DANHOV &mdash; Est. 1984</span>
+      <div class="origin-founder-line"></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" id="heroScroll" style="opacity:0;">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- DAILY TRUTH -->
+<div class="daily-truth" id="dailyTruth">
+  <div class="daily-truth-inner">
+    <span class="daily-label">Today's Truth</span>
+    <div class="daily-message" id="dailyMessage"></div>
+    <div class="daily-date" id="dailyDate"></div>
+  </div>
+</div>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <div class="video-bg"></div>
+  <div class="video-placeholder">
+    <div class="video-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="video-label">The Oneness Film</div>
+    <div class="video-caption">Galaxy &rarr; Water Vortex &rarr; Your Ring</div>
+    <div class="video-note">[ Place your cinematic video here &mdash; the same spiral, at every scale ]</div>
+  </div>
+</section>
+
+<!-- SPIRAL PHILOSOPHY -->
+<section class="spiral-section">
+  <span class="section-eyebrow">The Philosophy of Oneness</span>
+  <h2 class="section-title">The same force that shapes <em>galaxies</em>, shapes love.</h2>
+  <p class="section-body">From the arms of the Milky Way to the vortex of water in a cup &mdash; the spiral is the universe's oldest signature. DANHOV rings carry this truth in every curve, every setting, every stone.</p>
+
+  <div class="spiral-triad">
+    <div class="triad-item">
+      <span class="triad-icon"><span style="font-size:1em">&#127756;</span></span>
+      <div class="triad-title">The Galaxy</div>
+      <p class="triad-body">Billions of stars spiral outward from a single point &mdash; the same pattern nature repeats at every scale.</p>
+    </div>
+    <div class="triad-item">
+      <span class="triad-icon"><span style="font-size:1em">&#127744;</span></span>
+      <div class="triad-title">The Vortex</div>
+      <p class="triad-body">Stir water in a cup. Watch the galaxy appear. The universe expressing itself in your kitchen.</p>
+    </div>
+    <div class="triad-item">
+      <span class="triad-icon"><span style="font-size:1em">&#128141;</span></span>
+      <div class="triad-title">The Ring</div>
+      <p class="triad-body">A spiral band. Diamonds like stars. The same sacred geometry &mdash; now worn on the hand of love.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED IN -->
+<div class="featured-section">
+  <span class="featured-label">As Seen In</span>
+  <div class="featured-divider"></div>
+  <div class="featured-logos">
+    <span class="featured-logo">VOGUE</span>
+    <span class="featured-logo">Harper's BAZAAR</span>
+    <span class="featured-logo">WWD</span>
+    <span class="featured-logo">BRIDES</span>
+    <span class="featured-logo">Who What Wear</span>
+    <span class="featured-logo">Town & Country</span>
+    <span class="featured-logo">VOGUE</span>
+    <span class="featured-logo">Harper's BAZAAR</span>
+    <span class="featured-logo">WWD</span>
+    <span class="featured-logo">BRIDES</span>
+    <span class="featured-logo">Who What Wear</span>
+    <span class="featured-logo">Town & Country</span>
+  </div>
+</div>
+
+<!-- SPIRITUAL MESSAGES -->
+<section class="messages-section">
+  <div class="messages-header">
+    <span class="section-eyebrow">Truths We Live By</span>
+    <h2 class="section-title">The <em>philosophy</em> behind every ring</h2>
+  </div>
+
+  <div class="message-grid">
+    <div class="message-card">
+      <span class="message-number">01</span>
+      <div class="message-quote">"Light enters from the cracks of the darkness."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Every difficulty is an opening. Every wound is where the light comes through. This is not suffering &mdash; this is transformation.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">02</span>
+      <div class="message-quote">"There is no darkness &mdash; only an absence of light."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Darkness has no substance. It cannot compete with even a single flame. You are that flame. Love is that flame.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">03</span>
+      <div class="message-quote">"The pain I feel reminds me that I am breathing."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">To feel is to be alive. Even grief is a form of love &mdash; a love so large it aches. Presence is the only gift.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">04</span>
+      <div class="message-quote">"We are exactly where we need to be."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">There is no wrong path. Every step brought you to this moment, this ring, this love. Trust the spiral.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">05</span>
+      <div class="message-quote">"Love is complete acceptance with no judgment."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The most honest definition of love ever spoken. Not possession. Not performance. Pure, total, unconditional acceptance.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">06</span>
+      <div class="message-quote">"We are already whole."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">You are not looking for your other half. You are already complete. Love is two whole people choosing each other &mdash; fully.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">07</span>
+      <div class="message-quote">"Marriage is one of the best practices of love."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">A practice. Not a destination. Every morning you choose again. Every ring worn is a choice renewed.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">08</span>
+      <div class="message-quote">"Be the watcher."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Step behind the mind. Observe without attachment. In stillness, love is not something you find &mdash; it is what you already are.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">09</span>
+      <div class="message-quote">"There is nothing to know &mdash; knowing is ego."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The deepest wisdom is unknowing. In the space beyond concepts, love is not an idea. It is the ground of everything.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">10</span>
+      <div class="message-quote">"Self love is the foundation of all love."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">You cannot pour from an empty vessel. Every ring we make begins with this truth &mdash; love yourself completely first.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">11</span>
+      <div class="message-quote">"The present moment is all there is."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Past is memory. Future is imagination. This breath, this touch, this ring on this finger &mdash; only now is real.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">12</span>
+      <div class="message-quote">"Waves are the ocean."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">You are not separate from life &mdash; you are life expressing itself. The wave does not end. It returns. As do we.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">13</span>
+      <div class="message-quote">"Silence breaks the violence."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Not all battles are won by fighting. The most radical act is stillness &mdash; a pause so deep it dissolves what words and force never could. Silence is not absence. It is power in its purest form.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">14</span>
+      <div class="message-quote">"In silence, I saw the universe. The ring was formed."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">This is the origin. Not a studio. Not a sketch. In the deepest stillness, the universe revealed its form &mdash; and it moved through human hands into the world. Every ring carries that first silence inside it.</p>
+    </div>
+    <div class="message-card" style="background: rgba(181,96,106,0.07);">
+      <span class="message-number">15</span>
+      <div class="message-quote" style="font-size:clamp(40px,5vw,72px); line-height:1;">"Self love."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The most complete sentence. The most radical act. The ring you give yourself is as sacred as any given to you. Start here.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">16</span>
+      <div class="message-quote">"You're never alone."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The universe is always with you. The ring on your finger is always with you. You are always with you. That is everything.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">17</span>
+      <div class="message-quote">"If you feel alone &mdash; it means you're not in good company with yourself."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The cure for loneliness is not finding someone. It is finding yourself. Come home to you. That is where love begins.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">18</span>
+      <div class="message-quote">"The way out is to go in."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Every answer lives inside. Every exit from pain, confusion, lostness &mdash; is inward. In silence, the ring was formed. The whole brand is proof: go in, and the universe is waiting.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">19</span>
+      <div class="message-quote">"The longest journey of a human is only 12 inches &mdash; from the mind to the heart."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">12 inches. That is the whole distance. The mind asks questions the heart already answered. The ring lives closer to the heart than to the mind. That is not an accident.</p>
+    </div>
+    <div class="message-card" style="grid-column: 1 / -1; background: rgba(181,96,106,0.05); text-align:center; padding: 80px 72px;">
+      <span class="message-number" style="position:relative; font-size:40px; opacity:0.08;">20</span>
+      <div class="message-quote" style="font-size:clamp(48px,7vw,96px); line-height:1; margin-top:8px;">"Presence is a present."</div>
+      <div class="message-bar" style="margin: 24px auto;"></div>
+      <p class="message-note" style="max-width:480px; margin: 0 auto;">Which can only be used by being present. The most valuable gift you can give anyone &mdash; or yourself &mdash; is your full presence. Every DANHOV ring is a reminder to arrive.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">21</span>
+      <div class="message-quote">"Time is life, not money."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The most repeated lie of modern culture is that time is money. Replace it with the truth. Every moment you are not present, you are not losing money. You are losing life. The ring on your finger remembers this, even when you forget.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">22</span>
+      <div class="message-quote">"Being never created wars &mdash; but doers do."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Every war in history came from doing &mdash; from agenda, from ego in motion, from someone who needed to make something happen. A person simply being has no enemy. No agenda. No need to conquer. DANHOV is not a doing brand. It is a being brand.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">23</span>
+      <div class="message-quote">"The mind doesn't exist in now."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The mind lives in two places only &mdash; the past and the future. Regret and worry. Memory and anticipation. The present moment is the one place it cannot follow you. In silence, where the ring was formed, the mind was absent. The universe arrived instead.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">24</span>
+      <div class="message-quote">"Mindlessness &mdash; not mindfulness."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Mindfulness still puts the mind first. The observer watching itself is still the ego. Mindlessness is something deeper &mdash; not managing the mind, not watching it, but dropping it entirely. That is where the ring was born. In the total absence of mind. In the fullness of now.</p>
+    </div>
+    <div class="message-card" style="grid-column: 1 / -1; text-align:center; padding: 80px 72px;">
+      <span class="message-number" style="position:relative; font-size:40px; opacity:0.06;">25</span>
+      <div class="message-quote" style="font-size:clamp(52px,8vw,110px); line-height:1; margin-top:8px; font-style:italic;">"You are the universe."</div>
+      <div class="message-bar" style="margin: 28px auto;"></div>
+      <p class="message-note" style="max-width:480px; margin: 0 auto;">Not part of it. Not inside it. Not connected to it. You are it. The same force that shaped galaxies, shaped you. The Swirl Love Ring did not come from somewhere else. It came from you &mdash; through you &mdash; back to you.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">26</span>
+      <div class="message-quote">"The rest are illusion."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Every distraction. Every noise. Every thing the mind reaches for outside of now &mdash; illusion. Only presence is real. Only love is real. Only now is real. Only you &mdash; the universe &mdash; are real. The Swirl Love Ring was born where illusion cannot reach: in silence.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">27</span>
+      <div class="message-quote">"We don't create. Creation has already been done. Some of us see it &mdash; in silence."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">Michelangelo saw David in the marble. Jack saw the Swirl Love Ring in the silence. Einstein saw the equation. Every act of genius is not creation &mdash; it is reception. The universe has already made everything. Some of us get quiet enough to see it.</p>
+    </div>
+    <div class="message-card">
+      <span class="message-number">28</span>
+      <div class="message-quote">"Just accept the flow &mdash; no force."</div>
+      <div class="message-bar"></div>
+      <p class="message-note">The ring came without force. Love comes without force. The spiral in the galaxy, in the water, in the ring &mdash; never forced. It flows from the center outward, naturally, perfectly. Accept the flow. That is how the universe moves. That is how we move when we remember what we are.</p>
+    </div>
+    <div class="message-card" style="grid-column: 1 / -1; background: rgba(181,96,106,0.04); text-align:center; padding: 80px 72px;">
+      <span class="message-number" style="position:relative; font-size:40px; opacity:0.06;">29</span>
+      <div class="message-quote" style="font-size:clamp(28px,4vw,52px); line-height:1.2; margin-top:8px;">"You can see your own design &mdash; in silence.<br>We can make it."</div>
+      <div class="message-bar" style="margin: 28px auto;"></div>
+      <p class="message-note" style="max-width:520px; margin: 0 auto 40px;">Creation has already been done. Your ring already exists &mdash; in the silence where no mind can go. Close your eyes. Go inward. Tell us what you see. DANHOV will bring it through.</p>
+      <a href="danhov-design-in-silence.html" class="btn-primary" style="display:inline-block;">Enter the Silence &mdash; Design Your Ring</a>
+    </div>
+    <div class="message-card" style="grid-column: 1 / -1; text-align:center; padding: 80px 72px; background: rgba(181,96,106,0.05);">
+      <span class="message-number" style="position:relative; font-size:40px; opacity:0.06;">30</span>
+      <div class="message-quote" style="font-size:clamp(36px,5vw,72px); line-height:1.1; margin-top:8px;">"There is no death.<br><em style='color:var(--gold);'>It is an illusion &mdash; and a fear.</em>"</div>
+      <div class="message-bar" style="margin: 28px auto;"></div>
+      <p class="message-note" style="max-width:560px; margin: 0 auto;">The wave does not die. It returns to the ocean. You are the universe &mdash; and the universe does not end, it transforms. The ring is a circle: no beginning, no end. The Swirl Love Ring is not a symbol of love until death. It is a symbol that there is no death.</p>
+    </div>
+    <div class="message-card" style="grid-column: 1 / -1; text-align:center; padding: 100px 72px; background: linear-gradient(135deg, rgba(181,96,106,0.06) 0%, rgba(197,155,130,0.04) 100%);">
+      <span class="message-number" style="position:relative; font-size:40px; opacity:0.06;">31</span>
+      <div class="message-quote" style="font-size:clamp(48px,8vw,120px); line-height:1; margin-top:8px; font-style:italic;">"You attract<br>what you are."</div>
+      <div class="message-bar" style="margin: 32px auto;"></div>
+      <p class="message-note" style="max-width:560px; margin: 0 auto; font-size:15px; line-height:2;">Not what you want. Not what you chase. What you are. Be whole &mdash; attract wholeness. Be love &mdash; attract love. Be the universe &mdash; attract the universe. The Swirl Love Ring is not a wish. It is a declaration of what you already are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GIFT MOMENT -->
+<div class="gift-moment">
+  <div class="gift-inner">
+    <span class="gift-eyebrow">The DANHOV Gift</span>
+    <div class="gift-card">
+      <div class="gift-card-inner">
+        <div class="gift-logo"><img src="danhov-logo-transparent.png" alt="DANHOV" style="height:28px; width:auto; display:block; margin:0 auto;"></div>
+        <div class="gift-message">"Presence is a present."</div>
+        <div class="gift-sub">Which can only be used by being present.</div>
+        <div class="gift-rule"></div>
+        <div class="gift-from">With love</div>
+      </div>
+    </div>
+    <p class="gift-note">Every DANHOV ring arrives with this card. Not a receipt. Not a brochure. A teaching. Because the greatest gift is not the ring &mdash; it is the reminder to be here, fully, now.</p>
+    <a href="#" class="btn-primary">Give a DANHOV Ring</a>
+  </div>
+</div>
+<div class="inches-moment">
+  <div class="inches-bg-num">12</div>
+  <div class="inches-unit">12 inches.</div>
+  <div class="inches-divider"></div>
+  <div class="inches-subtitle">The longest journey a human will ever take.</div>
+  <div class="inches-truth">From the mind &mdash; to the heart.</div>
+</div>
+
+<!-- NEVER ALONE + THE WAY OUT PAIRED MOMENT -->
+<div class="neveralone-moment">
+  <div class="neveralone-inner">
+    <div class="neveralone-line-1">"You're never alone."</div>
+    <div class="neveralone-divider"></div>
+    <div class="neveralone-line-2">"If you feel alone &mdash; it means you're not in good company with yourself."</div>
+    <div class="neveralone-line-3">"The way out is to go in."</div>
+    <div class="neveralone-cta">
+      <a href="#" class="btn-primary">Discover the Self Love Ring</a>
+    </div>
+  </div>
+</div>
+
+<!-- SELF LOVE STANDALONE -->
+<div class="selflove-moment">
+  <div class="selflove-words">Self<br><em>love.</em></div>
+  <p class="selflove-sub">The foundation of everything.</p>
+</div>
+
+<!-- SELF LOVE RINGS -->
+<section class="selflove-section">
+  <div class="selflove-header">
+    <span class="section-eyebrow">A New Collection</span>
+    <h2 class="section-title">The <em>Self Love</em> Ring</h2>
+    <p class="section-body" style="max-width:560px;margin:24px auto 0;">You do not need to wait. You do not need permission. The most powerful ring you will ever wear is the one you give yourself &mdash; a promise, a declaration, a homecoming.</p>
+  </div>
+  <div class="selflove-grid">
+    <div class="selflove-card">
+      <div class="selflove-card-img">[ Ring photo ]</div>
+      <div class="selflove-card-body">
+        <div class="selflove-card-title">The Swirl Love Ring &mdash; Wholeness</div>
+        <div class="selflove-card-quote">"We are already whole."</div>
+      </div>
+    </div>
+    <div class="selflove-card selflove-card-featured">
+      <div class="selflove-card-img" style="height:420px;">[ Featured ring ]</div>
+      <div class="selflove-card-body">
+        <div class="selflove-card-title">The Swirl Love Ring</div>
+        <div class="selflove-card-quote">"It came through my form."</div>
+      </div>
+    </div>
+    <div class="selflove-card">
+      <div class="selflove-card-img">[ Ring photo ]</div>
+      <div class="selflove-card-body">
+        <div class="selflove-card-title">The Swirl Love Ring &mdash; Silence</div>
+        <div class="selflove-card-quote">"In silence, the ring was formed."</div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:64px;">
+    <a href="#" class="btn-primary">Explore Self Love Rings</a>
+  </div>
+</section>
+<div class="marquee-quote">
+  <div class="marquee-inner">
+    <span class="marquee-text">Be like water, my friend. <span>&#10022;</span></span>
+    <span class="marquee-text">Empty your mind &mdash; be formless, shapeless, like water. <span>&#10022;</span></span>
+    <span class="marquee-text">Water can flow, or it can crash. <span>&#10022;</span></span>
+    <span class="marquee-text">Be like water, my friend. <span>&#10022;</span></span>
+    <span class="marquee-text">Empty your mind &mdash; be formless, shapeless, like water. <span>&#10022;</span></span>
+    <span class="marquee-text">Water can flow, or it can crash. <span>&#10022;</span></span>
+  </div>
+</div>
+
+<!-- RING SHOWCASE -->
+<section class="ring-section">
+  <div class="ring-visual">
+    <div class="ring-orbit"></div>
+    <div class="ring-orbit"></div>
+    <div class="ring-orbit"></div>
+    <div class="ring-orbit"></div>
+    <div class="ring-placeholder">[ Your ring<br>photo here ]</div>
+  </div>
+  <div class="ring-content">
+    <span class="ring-eyebrow">The Signature Ring</span>
+    <h2 class="ring-title">Sacred geometry,<br><em>set in gold.</em></h2>
+    <p class="ring-body">Every DANHOV ring is handcrafted in Los Angeles using a spiral technique that mirrors the geometry of galaxies, seashells, and vortexes. When you wear this ring, you wear the signature of the universe itself.</p>
+    <div class="ring-stats">
+      <div>
+        <span class="ring-stat-num">40+</span>
+        <span class="ring-stat-label">Years of craft</span>
+      </div>
+      <div>
+        <span class="ring-stat-num">#1</span>
+        <span class="ring-stat-label">Sustainable brand</span>
+      </div>
+      <div>
+        <span class="ring-stat-num">&infin;</span>
+        <span class="ring-stat-label">The circle</span>
+      </div>
+    </div>
+    <a href="#" class="btn-primary">Explore the Ring</a>
+    <a href="#" class="btn-solid">Build Yours</a>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="collections-section">
+  <div class="collections-header">
+    <span class="section-eyebrow">Collections</span>
+    <h2 class="section-title">Every form of <em>love</em></h2>
+  </div>
+  <div class="collections-grid">
+    <div class="collection-card">
+      <div class="collection-bg"><span style="font-size:1em">&#128141;</span></div>
+      <div class="collection-info">
+        <span class="collection-name">Engagement Rings</span>
+        <span class="collection-count">View Collection &rarr;</span>
+      </div>
+    </div>
+    <div class="collection-card">
+      <div class="collection-bg">&#10024;</div>
+      <div class="collection-info">
+        <span class="collection-name">Wedding Bands</span>
+        <span class="collection-count">View Collection &rarr;</span>
+      </div>
+    </div>
+    <div class="collection-card">
+      <div class="collection-bg">&#11088;</div>
+      <div class="collection-info">
+        <span class="collection-name">Fine Jewelry</span>
+        <span class="collection-count">View Collection &rarr;</span>
+      </div>
+    </div>
+    <div class="collection-card">
+      <div class="collection-bg">&#9889;</div>
+      <div class="collection-info">
+        <span class="collection-name">Men's Jewelry</span>
+        <span class="collection-count">View Collection &rarr;</span>
+      </div>
+    </div>
+    <div class="collection-card">
+      <div class="collection-bg"><span style="font-size:1em">&#127744;</span></div>
+      <div class="collection-info">
+        <span class="collection-name">Build Your Ring</span>
+        <span class="collection-count">Start Here &rarr;</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAMOND SHAPES -->
+<section class="shapes-section">
+  <div class="shapes-header">
+    <span class="section-eyebrow">Shop by Shape</span>
+    <h2 class="section-title">Find your <em>form</em></h2>
+  </div>
+  <div class="shapes-scroll">
+    <!-- Simplified diamond shape SVGs -->
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="18" stroke="#c9a0ac" stroke-width="1"/>
+        <circle cx="24" cy="24" r="10" stroke="#c9a0ac" stroke-width="0.5" opacity="0.4"/>
+      </svg>
+      <span class="shape-name">Round</span>
+    </div>
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <ellipse cx="24" cy="24" rx="12" ry="20" stroke="#c9a0ac" stroke-width="1"/>
+      </svg>
+      <span class="shape-name">Oval</span>
+    </div>
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <polygon points="24,4 44,20 44,32 24,44 4,32 4,20" stroke="#c9a0ac" stroke-width="1" fill="none"/>
+      </svg>
+      <span class="shape-name">Cushion</span>
+    </div>
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <rect x="10" y="8" width="28" height="32" stroke="#c9a0ac" stroke-width="1"/>
+      </svg>
+      <span class="shape-name">Emerald</span>
+    </div>
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <polygon points="24,4 44,44 24,36 4,44" stroke="#c9a0ac" stroke-width="1" fill="none"/>
+      </svg>
+      <span class="shape-name">Pear</span>
+    </div>
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <polygon points="24,4 44,24 24,44 4,24" stroke="#c9a0ac" stroke-width="1" fill="none"/>
+      </svg>
+      <span class="shape-name">Radiant</span>
+    </div>
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <path d="M24 8 C12 8 4 16 4 24 C4 32 24 44 24 44 C24 44 44 32 44 24 C44 16 36 8 24 8Z" stroke="#c9a0ac" stroke-width="1" fill="none"/>
+      </svg>
+      <span class="shape-name">Heart</span>
+    </div>
+    <div class="shape-item">
+      <svg class="shape-svg" viewBox="0 0 48 48" fill="none">
+        <rect x="8" y="8" width="32" height="32" stroke="#c9a0ac" stroke-width="1"/>
+      </svg>
+      <span class="shape-name">Princess</span>
+    </div>
+  </div>
+</section>
+
+<!-- BIG QUOTE -->
+<section class="big-quote">
+  <blockquote class="big-quote-text">
+    "Out beyond ideas of wrongdoing and rightdoing, there is a field.<br>
+    I'll meet you <em>there</em>."
+  </blockquote>
+  <div class="big-quote-author">&mdash; Rumi</div>
+</section>
+
+<!-- VIRTUAL APPOINTMENT -->
+<div style="background: #f7ebe8; padding: 2px 0;">
+<section class="appointment-section">
+  <div class="appt-left">
+    <span class="section-eyebrow">Personal Experience</span>
+    <h2 class="section-title">Book a Virtual Appointment</h2>
+    <p class="section-body">Meet one-to-one with a DANHOV jewelry specialist. We'll guide you through every detail &mdash; from sacred geometry to stone selection &mdash; from the comfort of your home.</p>
+    <ul class="appt-features">
+      <li>One-on-one with a certified specialist</li>
+      <li>Live ring customization and preview</li>
+      <li>Diamond education &mdash; cut, clarity, carat</li>
+      <li>No pressure, no obligation</li>
+      <li>Available worldwide via Zoom or FaceTime</li>
+    </ul>
+    <a href="#" class="btn-primary">Schedule Now</a>
+  </div>
+  <div class="appt-right">
+    <div class="appt-form-title">Request a Consultation</div>
+    <input type="text" class="appt-input" placeholder="Your Name">
+    <input type="email" class="appt-input" placeholder="Email Address">
+    <input type="tel" class="appt-input" placeholder="Phone (optional)">
+    <input type="text" class="appt-input" placeholder="Preferred Date & Time">
+    <input type="text" class="appt-input" placeholder="What are you looking for?">
+    <button class="appt-btn">Book My Appointment</button>
+  </div>
+</section>
+</div>
+
+<!-- GALLERY STRIP -->
+<section class="gallery-section">
+  <div class="gallery-header">
+    <span class="section-eyebrow">The World of DANHOV</span>
+    <h2 class="section-title">Oneness, <em>in every frame</em></h2>
+  </div>
+  <div class="gallery-strip">
+    <div class="gallery-item" data-label="Galaxy Spiral"><span style="font-size:1em">&#127756;</span></div>
+    <div class="gallery-item" data-label="The Ring"><span style="font-size:1em">&#128141;</span></div>
+    <div class="gallery-item" data-label="Water Vortex"><span style="font-size:1em">&#127744;</span></div>
+    <div class="gallery-item" data-label="Diamond Close-up">&#128142;</div>
+    <div class="gallery-item" data-label="Eternal Love">&#10024;</div>
+    <div class="gallery-item" data-label="Sacred Form">&#128302;</div>
+    <div class="gallery-item" data-label="Galaxy Spiral"><span style="font-size:1em">&#127756;</span></div>
+    <div class="gallery-item" data-label="The Ring"><span style="font-size:1em">&#128141;</span></div>
+    <div class="gallery-item" data-label="Water Vortex"><span style="font-size:1em">&#127744;</span></div>
+    <div class="gallery-item" data-label="Diamond Close-up">&#128142;</div>
+    <div class="gallery-item" data-label="Eternal Love">&#10024;</div>
+    <div class="gallery-item" data-label="Sacred Form">&#128302;</div>
+  </div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section class="sustain-section">
+  <div class="sustain-badge">&#10022; #1 Most Sustainable Jewelry Brand &#10022;</div>
+  <span class="section-eyebrow">Our Commitment</span>
+  <h2 class="section-title">Love <em>the Earth</em> as you love each other</h2>
+  <p class="section-body" style="max-width:560px;margin:24px auto 0;font-size:15px;line-height:1.9;color:var(--grey);">Oneness extends beyond the ring. We are one with the planet. Every DANHOV piece is ethically sourced, responsibly crafted, and designed to last forever &mdash; just like the love it represents.</p>
+  <div class="sustain-pillars">
+    <div class="pillar">
+      <span class="pillar-icon">&#127807;</span>
+      <div class="pillar-title">Ethical Sourcing</div>
+      <p class="pillar-body">Every diamond traced to its origin. Conflict-free, certified, transparent.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">&#9851;</span>
+      <div class="pillar-title">Recycled Metals</div>
+      <p class="pillar-body">Gold and platinum reclaimed and refined. The earth stays whole.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">&#129309;</span>
+      <div class="pillar-title">Fair Craft</div>
+      <p class="pillar-body">Made in Los Angeles by artisans paid living wages with full benefits.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">&#127757;</span>
+      <div class="pillar-title">1% for the Planet</div>
+      <p class="pillar-body">Every purchase plants trees and supports clean water initiatives globally.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <h2 class="newsletter-title">Join the <em>Oneness</em> Circle</h2>
+  <p class="newsletter-sub">Spiritual teachings &middot; New collections &middot; Exclusive events &middot; Stories of love</p>
+  <div class="newsletter-form">
+    <input type="email" class="newsletter-input" placeholder="Your email address">
+    <button class="newsletter-btn">Join</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-brand-name"><img src="danhov-logo-transparent.png" alt="DANHOV" style="height:36px; width:auto; display:block;"></span>
+      <p class="footer-tagline">"Waves are the ocean."<br>Sacred geometry. Eternal love.<br>Handcrafted in Los Angeles since 1984.</p>
+      <div class="footer-contact">
+        Founded by Jack Hovsepian &middot; Est. 1984<br>
+        Los Angeles, California<br>
+        care@danhov.com<br>
+        1 (888) DANHOV-7
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Shop</div>
+      <ul class="footer-links">
+        <li><a href="#">Engagement Rings</a></li>
+        <li><a href="#">Wedding Bands</a></li>
+        <li><a href="#">Fine Jewelry</a></li>
+        <li><a href="#">Men's Jewelry</a></li>
+        <li><a href="#">Ring Builder</a></li>
+        <li><a href="#">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="#">Diamond Guide</a></li>
+        <li><a href="#">Ring Size Guide</a></li>
+        <li><a href="#">Gemstone Guide</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">The Philosophy</a></li>
+        <li><a href="#">Sustainability</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Connect</div>
+      <ul class="footer-links">
+        <li><a href="#">Book Appointment</a></li>
+        <li><a href="#">Store Locations</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Pinterest</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2025 DANHOV. All rights reserved. Made with love in Los Angeles.</span>
+    <span class="footer-final-quote">Waves are the ocean.</span>
+  </div>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const cursorRing = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    cursor.style.left = mouseX - 4 + 'px';
+    cursor.style.top = mouseY - 4 + 'px';
+  });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    cursorRing.style.left = ringX - 18 + 'px';
+    cursorRing.style.top = ringY - 18 + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(3)');
+    el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
+  });
+
+  // CINEMATIC HERO &mdash; word by word reveal with silence between
+  const heroSequence = [
+    { id: 'chLine1', delay: 800 },
+    { id: 'chLine2', delay: 2200 },
+    { id: 'chLine3', delay: 3800 },
+    { id: 'chDiv',   delay: 5600 },
+    { id: 'chLine4', delay: 6400 },
+    { id: 'chLine5', delay: 8000 },
+    { id: 'heroFounder', delay: 9600 },
+    { id: 'heroScroll', delay: 10200 }
+  ];
+  heroSequence.forEach(({ id, delay }) => {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.transition = 'opacity 1.4s ease, transform 1.4s ease, width 1.2s ease';
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+        if (el.classList.contains('ch-divider')) el.style.width = '60px';
+        el.classList.add('visible');
+      }
+    }, delay);
+  });
+
+  // Generate stars
+  const starsContainer = document.getElementById('stars');
+  for (let i = 0; i < 200; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    const size = Math.random() * 2 + 0.5;
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    star.style.setProperty('--dur', (Math.random() * 4 + 2) + 's');
+    star.style.setProperty('--min-op', Math.random() * 0.3 + 0.1);
+    starsContainer.appendChild(star);
+  }
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.message-card, .triad-item, .pillar, .collection-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    observer.observe(el);
+  });
+
+  // DAILY TRUTH &mdash; rotates through all 19 messages based on the date
+  const allMessages = [
+    "Light enters from the cracks of the darkness.",
+    "There is no darkness &mdash; only an absence of light.",
+    "The pain I feel reminds me that I am breathing.",
+    "We are exactly where we need to be.",
+    "Love is complete acceptance with no judgment.",
+    "We are already whole.",
+    "Marriage is one of the best practices of love.",
+    "Be the watcher.",
+    "There is nothing to know &mdash; knowing is ego.",
+    "The present moment is all there is.",
+    "Self love is the foundation of all love.",
+    "Waves are the ocean.",
+    "Silence breaks the violence.",
+    "In silence, I saw the universe. The ring was formed.",
+    "Self love.",
+    "You're never alone.",
+    "If you feel alone &mdash; it means you're not in good company with yourself.",
+    "The way out is to go in.",
+    "The longest journey of a human is only 12 inches &mdash; from the mind to the heart.",
+    "Presence is a present.",
+    "Time is life, not money.",
+    "Being never created wars &mdash; but doers do.",
+    "The mind doesn't exist in now.",
+    "Mindlessness &mdash; not mindfulness.",
+    "You are the universe.",
+    "The rest are illusion.",
+    "We don't create. Creation has already been done. Some of us see it &mdash; in silence.",
+    "Just accept the flow &mdash; no force.",
+    "You can see your own design in silence. We can make it.",
+    "There is no death. It is an illusion &mdash; and a fear.",
+    "You attract what you are."
+  ];
+
+  const today = new Date();
+  const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+  const msgIndex = dayOfYear % allMessages.length;
+  const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  const msgEl = document.getElementById('dailyMessage');
+  const dateEl = document.getElementById('dailyDate');
+
+  msgEl.innerHTML = '&ldquo;' + allMessages[msgIndex] + '&rdquo;';
+  dateEl.textContent = monthNames[today.getMonth()] + ' ' + today.getDate() + ', ' + today.getFullYear();
+
+  setTimeout(() => msgEl.classList.add('visible'), 300);
+</script>
+</body>
+</html>
