@@ -417,6 +417,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.4s;
+    text-align: center;
   }
   .triad-item:hover { transform: translateY(-4px); }
   .triad-item::before {
@@ -432,7 +433,7 @@
   .triad-icon {
     width: 64px;
     height: 64px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1692,13 +1693,17 @@
   <div class="spiral-triad">
     <div class="triad-item">
       <span class="triad-icon">
+        <!-- Galaxy: bright core + two sweeping spiral arms + star dots -->
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="2" fill="#AC3438"/>
-          <path d="M24 24 Q28 18 34 20 Q40 22 38 28 Q36 34 30 33 Q22 32 20 24 Q18 14 26 10 Q36 6 42 14 Q48 22 44 32 Q40 42 30 44 Q18 46 10 38 Q2 30 4 18 Q6 6 18 4" stroke="#AC3438" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <circle cx="38" cy="10" r="1.5" fill="#AC3438" opacity="0.5"/>
-          <circle cx="42" cy="22" r="1" fill="#AC3438" opacity="0.4"/>
-          <circle cx="10" cy="36" r="1.5" fill="#AC3438" opacity="0.5"/>
-          <circle cx="6" cy="16" r="1" fill="#AC3438" opacity="0.4"/>
+          <ellipse cx="24" cy="24" rx="3" ry="2" fill="#AC3438"/>
+          <path d="M24 24 C29 19 37 17 39 12 C41 8 37 4 31 7 C25 10 21 15 19 21 C17 27 19 33 23 35 C27 37 33 35 36 30" stroke="#AC3438" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M24 24 C19 29 11 31 9 36 C7 40 11 44 17 41 C23 38 27 33 29 27 C31 21 29 15 25 13" stroke="#AC3438" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <circle cx="39" cy="11" r="1.2" fill="#AC3438"/>
+          <circle cx="9" cy="37" r="1.2" fill="#AC3438"/>
+          <circle cx="43" cy="22" r="0.8" fill="#AC3438" opacity="0.55"/>
+          <circle cx="5" cy="26" r="0.8" fill="#AC3438" opacity="0.55"/>
+          <circle cx="18" cy="7" r="0.7" fill="#AC3438" opacity="0.45"/>
+          <circle cx="34" cy="41" r="0.7" fill="#AC3438" opacity="0.45"/>
         </svg>
       </span>
       <div class="triad-title">The Galaxy</div>
@@ -1706,10 +1711,15 @@
     </div>
     <div class="triad-item">
       <span class="triad-icon">
+        <!-- Vortex: concentric ellipses narrowing to a centre dot, like a whirlpool -->
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 24 Q26 20 30 21 Q34 22 33 26 Q32 30 28 30 Q22 30 20 25 Q18 18 23 14 Q30 9 37 14 Q44 19 42 28 Q40 37 32 40 Q22 43 14 37 Q5 30 7 20 Q10 9 21 6" stroke="#AC3438" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-          <circle cx="24" cy="24" r="2.5" fill="#AC3438" opacity="0.3"/>
-          <circle cx="24" cy="24" r="1" fill="#AC3438"/>
+          <ellipse cx="24" cy="27" rx="19" ry="9" stroke="#AC3438" stroke-width="1.4"/>
+          <ellipse cx="24" cy="26" rx="13" ry="6" stroke="#AC3438" stroke-width="1.4"/>
+          <ellipse cx="24" cy="25" rx="8"  ry="4" stroke="#AC3438" stroke-width="1.4"/>
+          <ellipse cx="24" cy="24" rx="4"  ry="2" stroke="#AC3438" stroke-width="1.4"/>
+          <circle  cx="24" cy="24" r="1.5" fill="#AC3438"/>
+          <path d="M6 24 Q10 27 13 27" stroke="#AC3438" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+          <path d="M42 24 Q38 21 35 21" stroke="#AC3438" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
         </svg>
       </span>
       <div class="triad-title">The Vortex</div>
