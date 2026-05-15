@@ -1689,6 +1689,187 @@
     text-transform: uppercase;
     color: var(--gold-dim);
   }
+
+  /* PRODUCTS SECTION */
+  .products-section {
+    padding: 120px 48px;
+    background: #fff8f6;
+  }
+  .products-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .products-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .prod-tab {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid rgba(172,52,56,0.2);
+    color: var(--grey);
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .prod-tab:hover { border-color: var(--logo-red); color: var(--logo-red); }
+  .prod-tab.active { background: var(--logo-red); color: #fff8f6; border-color: var(--logo-red); }
+  .products-filter {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .prod-filter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid rgba(181,96,106,0.15);
+    color: var(--grey);
+    padding: 6px 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .prod-filter:hover { border-color: var(--crimson); color: var(--crimson); }
+  .prod-filter.active { background: var(--crimson); color: #fff8f6; border-color: var(--crimson); }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .prod-card {
+    background: #fdf0ed;
+    border: 1px solid rgba(181,96,106,0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .prod-card:hover { box-shadow: 0 8px 32px rgba(172,52,56,0.12); transform: translateY(-2px); }
+  .prod-img {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f7e8e8 0%, #f0d8d8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .prod-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .prod-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prod-img-placeholder svg { width: 56px; height: 56px; opacity: 0.25; }
+  .prod-collection-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--logo-red);
+    color: #fff8f6;
+    padding: 3px 8px;
+  }
+  .prod-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .prod-style {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+  .prod-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.3;
+  }
+  .prod-metals {
+    font-size: 10px;
+    color: var(--grey);
+    letter-spacing: 0.05em;
+  }
+  .prod-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--logo-red);
+    margin-top: auto;
+    padding-top: 8px;
+  }
+  .prod-cta {
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--logo-red);
+    text-decoration: none;
+    padding: 12px;
+    border-top: 1px solid rgba(181,96,106,0.12);
+    transition: background 0.3s, color 0.3s;
+    background: transparent;
+  }
+  .prod-cta:hover { background: var(--logo-red); color: #fff8f6; }
+  .products-load-more {
+    text-align: center;
+    margin-top: 48px;
+  }
+  .btn-load-more {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid var(--logo-red);
+    color: var(--logo-red);
+    padding: 14px 48px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn-load-more:hover { background: var(--logo-red); color: #fff8f6; }
+  @media (max-width: 900px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .products-grid { grid-template-columns: 1fr; }
+    .products-section { padding: 80px 20px; }
+  }
 </style>
 </head>
 <body>
@@ -1704,34 +1885,34 @@
 
     <!-- Engagement Rings -->
     <li>
-      <a href="#">Engagement Rings</a>
+      <a href="https://www.danhov.com/engagement-rings" target="_blank">Engagement Rings</a>
       <div class="mega-menu">
         <div class="mm-col mm-col-wide">
           <span class="mm-label">Collections</span>
           <div class="mm-grid mm-grid-5">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/a/e/ae520uq_r1_1_wg.jpg" alt="Abbraccio"></div><span class="mm-card-name">Abbraccio</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_carezza.jpg" alt="Carezza"></div><span class="mm-card-name">Carezza</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_classico.jpg" alt="Classico"></div><span class="mm-card-name">Classico</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_couture.jpg" alt="Couture"></div><span class="mm-card-name">Couture</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/a/e/ae141-4_48oy8iu3ljtkgsxf.jpg" alt="Eleganza"></div><span class="mm-card-name">Eleganza</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_per-lei.jpg" alt="Per Lei"></div><span class="mm-card-name">Per Lei</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_petalo.jpg" alt="Petalo"></div><span class="mm-card-name">Petalo</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_solo-filo.jpg" alt="Solo Filo"></div><span class="mm-card-name">Solo Filo</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_unito.jpg" alt="Unito"></div><span class="mm-card-name">Unito</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/w/e/we520p_r1_wg_1__2.jpg" alt="Voltaggio"></div><span class="mm-card-name">Voltaggio</span></a>
+            <a href="https://www.danhov.com/engagement-rings/swirl-engagement-rings-abbraccio" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/a/e/ae520uq_r1_1_wg.jpg" alt="Abbraccio"></div><span class="mm-card-name">Abbraccio</span></a>
+            <a href="https://www.danhov.com/engagement-rings/carezza" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_carezza.jpg" alt="Carezza"></div><span class="mm-card-name">Carezza</span></a>
+            <a href="https://www.danhov.com/engagement-rings/classico" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_classico.jpg" alt="Classico"></div><span class="mm-card-name">Classico</span></a>
+            <a href="https://www.danhov.com/engagement-rings/couture" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_couture.jpg" alt="Couture"></div><span class="mm-card-name">Couture</span></a>
+            <a href="https://www.danhov.com/engagement-rings/eleganza" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/a/e/ae141-4_48oy8iu3ljtkgsxf.jpg" alt="Eleganza"></div><span class="mm-card-name">Eleganza</span></a>
+            <a href="https://www.danhov.com/engagement-rings/per-lei" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_per-lei.jpg" alt="Per Lei"></div><span class="mm-card-name">Per Lei</span></a>
+            <a href="https://www.danhov.com/engagement-rings/petalo" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_petalo.jpg" alt="Petalo"></div><span class="mm-card-name">Petalo</span></a>
+            <a href="https://www.danhov.com/engagement-rings/solo-filo" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_solo-filo.jpg" alt="Solo Filo"></div><span class="mm-card-name">Solo Filo</span></a>
+            <a href="https://www.danhov.com/engagement-rings/unito" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_collection_unito.jpg" alt="Unito"></div><span class="mm-card-name">Unito</span></a>
+            <a href="https://www.danhov.com/engagement-rings/voltaggio" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-sm"><img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/w/e/we520p_r1_wg_1__2.jpg" alt="Voltaggio"></div><span class="mm-card-name">Voltaggio</span></a>
           </div>
-          <a href="#" class="mm-explore">Explore All Engagement Rings &rarr;</a>
+          <a href="https://www.danhov.com/engagement-rings" target="_blank" class="mm-explore">Explore All Engagement Rings &rarr;</a>
         </div>
         <div class="mm-col" style="flex:0 0 220px;">
           <span class="mm-label">Shop by Metal</span>
           <div class="mm-metals" style="flex-direction:column;">
-            <a href="#" class="mm-metal"><span class="mm-metal-swatch" style="background:#e8e0d8; border:1px solid #ccc;"></span>White Gold</a>
-            <a href="#" class="mm-metal"><span class="mm-metal-swatch" style="background:#d4a853;"></span>Yellow Gold</a>
-            <a href="#" class="mm-metal"><span class="mm-metal-swatch" style="background:#e8a090;"></span>Rose Gold</a>
+            <a href="https://www.danhov.com/engagement-rings/white-gold" target="_blank" class="mm-metal"><span class="mm-metal-swatch" style="background:#e8e0d8; border:1px solid #ccc;"></span>White Gold</a>
+            <a href="https://www.danhov.com/engagement-rings/yellow-gold" target="_blank" class="mm-metal"><span class="mm-metal-swatch" style="background:#d4a853;"></span>Yellow Gold</a>
+            <a href="https://www.danhov.com/engagement-rings/rose-gold" target="_blank" class="mm-metal"><span class="mm-metal-swatch" style="background:#e8a090;"></span>Rose Gold</a>
           </div>
           <div style="margin-top:32px;">
             <span class="mm-label">Award Winners</span>
-            <div class="mm-card-img mm-card-img-lg" style="border-radius:2px;"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_award-winners-1.jpg" alt="Award Winners" style="width:100%;height:100%;object-fit:cover;"></div>
+            <a href="https://www.danhov.com/engagement-rings" target="_blank"><div class="mm-card-img mm-card-img-lg" style="border-radius:2px;"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_award-winners-1.jpg" alt="Award Winners" style="width:100%;height:100%;object-fit:cover;"></div></a>
           </div>
         </div>
       </div>
@@ -1739,58 +1920,58 @@
 
     <!-- Wedding Bands -->
     <li>
-      <a href="#">Wedding Bands</a>
+      <a href="https://www.danhov.com/wedding-bands" target="_blank">Wedding Bands</a>
       <div class="mega-menu">
         <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
           <span class="mm-label">Shop by Category</span>
           <div class="mm-grid mm-grid-3" style="max-width:700px;">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_award-winners-1.jpg" alt="Award Winners"></div><span class="mm-card-name">Award Winners</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/w/h/white_top_2.jpg" alt="Her Bands"></div><span class="mm-card-name">Her Bands</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_his-bands-1.jpg" alt="His Bands"></div><span class="mm-card-name">His Bands</span></a>
+            <a href="https://www.danhov.com/wedding-bands/award-winners" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_award-winners-1.jpg" alt="Award Winners"></div><span class="mm-card-name">Award Winners</span></a>
+            <a href="https://www.danhov.com/wedding-bands/her-bands" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/w/h/white_top_2.jpg" alt="Her Bands"></div><span class="mm-card-name">Her Bands</span></a>
+            <a href="https://www.danhov.com/wedding-bands/his-bands" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/wysiwyg/new-home/img_his-bands-1.jpg" alt="His Bands"></div><span class="mm-card-name">His Bands</span></a>
           </div>
-          <a href="#" class="mm-explore">View All Wedding Bands &rarr;</a>
+          <a href="https://www.danhov.com/wedding-bands" target="_blank" class="mm-explore">View All Wedding Bands &rarr;</a>
         </div>
       </div>
     </li>
 
     <!-- Fine Jewelry -->
     <li>
-      <a href="#">Fine Jewelry</a>
+      <a href="https://www.danhov.com/fine-jewelry" target="_blank">Fine Jewelry</a>
       <div class="mega-menu">
         <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
           <span class="mm-label">Shop by Category</span>
           <div class="mm-grid mm-grid-3" style="max-width:700px;">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/y/e/yellow_top_4.jpg" alt="Bands"></div><span class="mm-card-name">Bands</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/1/_/1_rg_15.jpg" alt="Earrings"></div><span class="mm-card-name">Earrings</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le_517_125_sz_6_1.jpg" alt="Pendants"></div><span class="mm-card-name">Pendants</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring-c_round_dai_wg_1.jpg" alt="Rings"></div><span class="mm-card-name">Rings</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/b/r/brown_pink_2_1__1_1.png" alt="Pop of Color"></div><span class="mm-card-name">Pop of Color</span></a>
+            <a href="https://www.danhov.com/fine-jewelry/bands" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/y/e/yellow_top_4.jpg" alt="Bands"></div><span class="mm-card-name">Bands</span></a>
+            <a href="https://www.danhov.com/fine-jewelry/earrings" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/1/_/1_rg_15.jpg" alt="Earrings"></div><span class="mm-card-name">Earrings</span></a>
+            <a href="https://www.danhov.com/fine-jewelry/online" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le_517_125_sz_6_1.jpg" alt="Pendants"></div><span class="mm-card-name">Pendants</span></a>
+            <a href="https://www.danhov.com/fine-jewelry/rings" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring-c_round_dai_wg_1.jpg" alt="Rings"></div><span class="mm-card-name">Rings</span></a>
+            <a href="https://www.danhov.com/fine-jewelry/pop-of-color" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/b/r/brown_pink_2_1__1_1.png" alt="Pop of Color"></div><span class="mm-card-name">Pop of Color</span></a>
           </div>
-          <a href="#" class="mm-explore">Explore All Fine Jewelry &rarr;</a>
+          <a href="https://www.danhov.com/fine-jewelry" target="_blank" class="mm-explore">Explore All Fine Jewelry &rarr;</a>
         </div>
       </div>
     </li>
 
     <!-- Men's -->
     <li>
-      <a href="#">Men's</a>
+      <a href="https://www.danhov.com/men-jewelry" target="_blank">Men's</a>
       <div class="mega-menu">
         <div class="mm-col" style="padding-left:0; border-right:none; width:100%;">
           <span class="mm-label">Shop Men's</span>
           <div class="mm-grid mm-grid-3" style="max-width:700px;">
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/1/_/1_9_5_1.jpg" alt="Rings"></div><span class="mm-card-name">Rings</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/c/s/cs147_br_1_yg.jpg" alt="Bracelets"></div><span class="mm-card-name">Bracelets</span></a>
-            <a href="#" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le_517_125_sz_6_1.jpg" alt="Necklaces &amp; Pendants"></div><span class="mm-card-name">Necklaces &amp; Pendants</span></a>
+            <a href="https://www.danhov.com/men-jewelry/rings" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/1/_/1_9_5_1.jpg" alt="Rings"></div><span class="mm-card-name">Rings</span></a>
+            <a href="https://www.danhov.com/men-jewelry/bracelet" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/c/s/cs147_br_1_yg.jpg" alt="Bracelets"></div><span class="mm-card-name">Bracelets</span></a>
+            <a href="https://www.danhov.com/men-jewelry/necklaces-pendants" target="_blank" class="mm-card"><div class="mm-card-img mm-card-img-lg"><img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le_517_125_sz_6_1.jpg" alt="Necklaces &amp; Pendants"></div><span class="mm-card-name">Necklaces &amp; Pendants</span></a>
           </div>
-          <a href="#" class="mm-explore">Explore All Men's &rarr;</a>
+          <a href="https://www.danhov.com/men-jewelry" target="_blank" class="mm-explore">Explore All Men's &rarr;</a>
         </div>
       </div>
     </li>
 
-    <li><a href="#">Ring Builder</a></li>
-    <li><a href="#">Philosophy</a></li>
+    <li><a href="https://www.danhov.com/engagement-rings" target="_blank">Ring Builder</a></li>
+    <li><a href="#" class="nav-philosophy">Philosophy</a></li>
   </ul>
-  <a href="#" class="nav-cta">
+  <a href="https://www.danhov.com/engagement-rings" target="_blank" class="nav-cta">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:9px;margin-top:-2px;"><path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" fill="currentColor"/><path d="M19 16L19.75 18.25L22 19L19.75 19.75L19 22L18.25 19.75L16 19L18.25 18.25L19 16Z" fill="currentColor" opacity="0.7"/><path d="M5 3L5.5 4.5L7 5L5.5 5.5L5 7L4.5 5.5L3 5L4.5 4.5L5 3Z" fill="currentColor" opacity="0.5"/></svg>Build Your Ring
   </a>
 </nav>
@@ -2032,7 +2213,7 @@
     </div>
     <div class="message-card">
       <span class="message-number">13</span>
-      <div class="message-quote">"Silence breaks the violence."</div>
+      <div class="message-quote" style="color: var(--logo-red);">"Silence breaks the violence."</div>
       <div class="message-bar"></div>
       <p class="message-note">Not all battles are won by fighting. The most radical act is stillness &mdash; a pause so deep it dissolves what words and force never could. Silence is not absence. It is power in its purest form.</p>
     </div>
@@ -2313,6 +2494,1034 @@
     </div>
   </div>
 </section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="shop">
+  <div class="products-header">
+    <span class="section-eyebrow">Shop</span>
+    <h2 class="section-title">Crafted for <em>eternity</em></h2>
+  </div>
+
+  <div class="products-tabs">
+    <button class="prod-tab active" onclick="switchTab('engagement',this)">Engagement Rings</button>
+    <button class="prod-tab" onclick="switchTab('bands',this)">Wedding Bands</button>
+    <button class="prod-tab" onclick="switchTab('fine',this)">Fine Jewelry</button>
+    <button class="prod-tab" onclick="switchTab('mens',this)">Men's Jewelry</button>
+  </div>
+
+  <!-- Engagement filter -->
+  <div class="products-filter" id="filter-engagement">
+    <button class="prod-filter active" onclick="filterCol('all',this)">All</button>
+    <button class="prod-filter" onclick="filterCol('abbraccio',this)">Abbraccio</button>
+    <button class="prod-filter" onclick="filterCol('voltaggio',this)">Voltaggio</button>
+    <button class="prod-filter" onclick="filterCol('classico',this)">Classico</button>
+    <button class="prod-filter" onclick="filterCol('norme',this)">Norme de Danhov</button>
+    <button class="prod-filter" onclick="filterCol('eleganza',this)">Eleganza</button>
+    <button class="prod-filter" onclick="filterCol('couture',this)">Couture</button>
+    <button class="prod-filter" onclick="filterCol('unito',this)">Unito</button>
+    <button class="prod-filter" onclick="filterCol('tubetto',this)">Tubetto</button>
+    <button class="prod-filter" onclick="filterCol('solo',this)">Solo Filo</button>
+    <button class="prod-filter" onclick="filterCol('perlei',this)">Per Lei</button>
+    <button class="prod-filter" onclick="filterCol('petalo',this)">Petalo</button>
+    <button class="prod-filter" onclick="filterCol('carezza',this)">Carezza</button>
+  </div>
+
+  <div class="products-grid" id="products-grid">
+
+    <!-- ===== ENGAGEMENT RINGS ===== -->
+    <!-- Abbraccio -->
+    <div class="prod-card" data-cat="engagement" data-col="abbraccio">
+      <div class="prod-img">
+        <img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/a/e/ae520uq_r1_1_wg.jpg" alt="Abbraccio Swirl Diamond Ring" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE520UQ</span>
+        <span class="prod-name">Abbraccio Swirl Diamond Ring</span>
+        <span class="prod-metals">18k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $5,390</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="abbraccio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE507UQ</span>
+        <span class="prod-name">Abbraccio Engagement Ring</span>
+        <span class="prod-metals">18k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $6,490</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="abbraccio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE511UQ</span>
+        <span class="prod-name">Abbraccio Three Stone Engagement Ring</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $9,400</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="abbraccio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE506UQ</span>
+        <span class="prod-name">Abbraccio Unique Swirl Ring</span>
+        <span class="prod-metals">18k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $6,530</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="abbraccio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE530UQ</span>
+        <span class="prod-name">Abbraccio Ladies Engagement Ring</span>
+        <span class="prod-metals">18k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $6,730</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="abbraccio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE505UQ-PR</span>
+        <span class="prod-name">Abbraccio Princess Diamond Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $5,230</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="abbraccio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE538VQ</span>
+        <span class="prod-name">Abbraccio Swirl Diamond Ring</span>
+        <span class="prod-metals">18k Rose Gold · White Gold</span>
+        <span class="prod-price">From $11,800</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Voltaggio -->
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE515P</span>
+        <span class="prod-name">Voltaggio Engagement Ring</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $3,700</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">V1E510VH</span>
+        <span class="prod-name">Voltaggio Tension Engagement Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $6,480</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE508VH</span>
+        <span class="prod-name">Voltaggio Unique Engagement Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold</span>
+        <span class="prod-price">From $9,170</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE506VZ</span>
+        <span class="prod-name">Voltaggio Tension Set Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $6,120</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE535VH</span>
+        <span class="prod-name">Voltaggio Tension Set Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $6,350</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE536P</span>
+        <span class="prod-name">Voltaggio Engagement Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $4,500</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE536VH</span>
+        <span class="prod-name">Voltaggio Engagement Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold</span>
+        <span class="prod-price">From $7,050</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE534P</span>
+        <span class="prod-name">Voltaggio Tension Set Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $5,960</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE510P</span>
+        <span class="prod-name">Voltaggio Tension Set Ring</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $5,480</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="voltaggio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><polygon points="28,6 50,28 28,50 6,28" stroke="#AC3438" stroke-width="1.5"/><polygon points="28,14 42,28 28,42 14,28" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Voltaggio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">VE508LR</span>
+        <span class="prod-name">Voltaggio Engagement Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold</span>
+        <span class="prod-price">From $7,790</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Classico -->
+    <div class="prod-card" data-cat="engagement" data-col="classico">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="28" rx="22" ry="14" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="28" cy="28" rx="14" ry="8" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Classico</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">WE520P</span>
+        <span class="prod-name">Classico Handcrafted Diamond Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $2,820</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="classico">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="28" rx="22" ry="14" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="28" cy="28" rx="14" ry="8" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Classico</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">WE531VQ-R</span>
+        <span class="prod-name">Classico Round Cut Ladies Engagement Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $4,000</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="classico">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="28" rx="22" ry="14" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="28" cy="28" rx="14" ry="8" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Classico</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">WE532UH</span>
+        <span class="prod-name">Classico Engagement Ring</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $5,740</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Norme de Danhov -->
+    <div class="prod-card" data-cat="engagement" data-col="norme">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><rect x="10" y="10" width="36" height="36" stroke="#AC3438" stroke-width="1.5"/><rect x="18" y="18" width="20" height="20" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RE601P</span>
+        <span class="prod-name">Norme de Danhov Ring for Women</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $2,320</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="norme">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><rect x="10" y="10" width="36" height="36" stroke="#AC3438" stroke-width="1.5"/><rect x="18" y="18" width="20" height="20" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RE573P</span>
+        <span class="prod-name">Norme de Danhov Classico Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $2,320</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="norme">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><rect x="10" y="10" width="36" height="36" stroke="#AC3438" stroke-width="1.5"/><rect x="18" y="18" width="20" height="20" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RE578UQ</span>
+        <span class="prod-name">Norme de Danhov Diamond Ring</span>
+        <span class="prod-metals">14k White Gold · Rose Gold (Two Tone)</span>
+        <span class="prod-price">From $3,030</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="norme">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><rect x="10" y="10" width="36" height="36" stroke="#AC3438" stroke-width="1.5"/><rect x="18" y="18" width="20" height="20" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RE573UH</span>
+        <span class="prod-name">Norme de Danhov Ring for Women</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $3,140</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="engagement" data-col="norme">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><rect x="10" y="10" width="36" height="36" stroke="#AC3438" stroke-width="1.5"/><rect x="18" y="18" width="20" height="20" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RE591UH</span>
+        <span class="prod-name">Norme de Danhov Ladies Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $5,820</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Eleganza -->
+    <div class="prod-card" data-cat="engagement" data-col="eleganza">
+      <div class="prod-img">
+        <img src="https://www.danhov.com/media/catalog/product/cache/2b1edc83ec865263004db07a00170440/a/e/ae141-4_48oy8iu3ljtkgsxf.jpg" alt="Eleganza Swirl Diamond Ring" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none"><svg viewBox="0 0 56 56" fill="none"><path d="M28 8 C16 8 8 16 8 28 C8 40 16 48 28 48 C40 48 48 40 48 28 C48 16 40 8 28 8 Z M28 16 C36 16 40 22 40 28 C40 34 36 40 28 40 C20 40 16 34 16 28 C16 22 20 16 28 16 Z" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Eleganza</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">ZE501UQ</span>
+        <span class="prod-name">Eleganza Swirl Diamond Ring</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $4,060</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Couture -->
+    <div class="prod-card" data-cat="engagement" data-col="couture">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M28 8 L48 28 L28 48 L8 28 Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M28 16 L40 28 L28 40 L16 28 Z" stroke="#AC3438" stroke-width="0.75" opacity="0.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Couture</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">CE502UH</span>
+        <span class="prod-name">Couture Engagement Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $3,730</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Unito -->
+    <div class="prod-card" data-cat="engagement" data-col="unito">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><line x1="8" y1="28" x2="48" y2="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="16" stroke="#AC3438" stroke-width="1.5"/></svg></div>
+        <span class="prod-collection-badge">Unito</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">UE500UH</span>
+        <span class="prod-name">Unito Triple Shank Engagement Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $3,740</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/engagement-rings" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- ===== WEDDING BANDS ===== -->
+    <!-- Abbraccio Bands -->
+    <div class="prod-card" data-cat="bands" data-col="abbraccio">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="14" stroke="#AC3438" stroke-width="0.75" opacity="0.4"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AE536UQ</span>
+        <span class="prod-name">Abbraccio Braided Diamond Wedding Band</span>
+        <span class="prod-metals">18k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $2,620</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/wedding-bands" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Tubetto Bands (Her) -->
+    <div class="prod-card" data-cat="bands" data-col="tubetto">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="14" stroke="#AC3438" stroke-width="0.75" opacity="0.4"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB521VA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $3,910</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/wedding-bands" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="bands" data-col="tubetto">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="14" stroke="#AC3438" stroke-width="0.75" opacity="0.4"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB520VA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $5,590</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/wedding-bands" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="bands" data-col="tubetto">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="14" stroke="#AC3438" stroke-width="0.75" opacity="0.4"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB515VA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">Platinum · 18k White/Yellow/Rose Gold · 14k Gold</span>
+        <span class="prod-price">From $3,580</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/wedding-bands" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="bands" data-col="tubetto">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="14" stroke="#AC3438" stroke-width="0.75" opacity="0.4"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB500UA</span>
+        <span class="prod-name">Tubetto Award Winning Wedding Band</span>
+        <span class="prod-metals">18k Black &amp; White Gold</span>
+        <span class="prod-price">From $10,990</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/wedding-bands" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- ===== FINE JEWELRY ===== -->
+    <!-- Earrings -->
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH513V</span>
+        <span class="prod-name">Norme de Danhov Halo Diamonds Earrings</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $1,990</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH506U</span>
+        <span class="prod-name">Norme de Danhov Smile Diamonds Earrings</span>
+        <span class="prod-metals">18k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $2,680</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH508G</span>
+        <span class="prod-name">Norme de Danhov Flower Diamonds Earrings</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $1,580</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH500P</span>
+        <span class="prod-name">Norme de Danhov Double Heart Earrings</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $795</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH512U</span>
+        <span class="prod-name">Norme de Danhov Heart Diamonds Earrings</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $3,460</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH503G</span>
+        <span class="prod-name">Norme de Danhov Heart Shape Diamond Earrings</span>
+        <span class="prod-metals">18k Rose Gold · 14k White Gold</span>
+        <span class="prod-price">From $4,680</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH510U</span>
+        <span class="prod-name">Norme de Danhov Double Halo Natural Diamonds Earrings</span>
+        <span class="prod-metals">18k White Gold · Yellow Gold</span>
+        <span class="prod-price">From $3,960</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH518U</span>
+        <span class="prod-name">Norme de Danhov Heart Diamonds Earrings</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $2,640</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Abbraccio</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">AH501U</span>
+        <span class="prod-name">Abbraccio Swirl Cushion Diamond Earrings</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $4,840</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH505U</span>
+        <span class="prod-name">Norme de Danhov CrossOver Medium Hoop Diamond Earrings</span>
+        <span class="prod-metals">18k White Gold · Yellow Gold</span>
+        <span class="prod-price">From $6,000</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="16" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Fine Jewelry</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH504P</span>
+        <span class="prod-name">Bezel-Set Round Stud Earrings</span>
+        <span class="prod-metals">14k Rose Gold · 18k Yellow Gold · Platinum</span>
+        <span class="prod-price">From $1,360</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="16" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="4" fill="#AC3438" opacity="0.3"/></svg></div>
+        <span class="prod-collection-badge">Fine Jewelry</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RH502P</span>
+        <span class="prod-name">Trio Diamond Cluster Stud Earrings</span>
+        <span class="prod-metals">18k Yellow Gold · Platinum</span>
+        <span class="prod-price">From $1,900</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Pendants -->
+    <div class="prod-card" data-cat="fine" data-col="pendants">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="36" r="14" stroke="#AC3438" stroke-width="1.5"/><line x1="28" y1="8" x2="28" y2="22" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="8" r="3" stroke="#AC3438" stroke-width="1"/></svg></div>
+        <span class="prod-collection-badge">Per Lei</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">LP531U</span>
+        <span class="prod-name">Per Lei Diamond Oval Pendant</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $2,980</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="pendants">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="36" r="14" stroke="#AC3438" stroke-width="1.5"/><line x1="28" y1="8" x2="28" y2="22" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="8" r="3" stroke="#AC3438" stroke-width="1"/></svg></div>
+        <span class="prod-collection-badge">Eleganza</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">ZP507U</span>
+        <span class="prod-name">Eleganza Braided Round Pendant</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $3,800</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="pendants">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="36" r="14" stroke="#AC3438" stroke-width="1.5"/><line x1="28" y1="8" x2="28" y2="22" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="8" r="3" stroke="#AC3438" stroke-width="1"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RP503U</span>
+        <span class="prod-name">Norme de Danhov Shamrock Pendant with Rolo Chain</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold</span>
+        <span class="prod-price">From $1,925</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Rings / Bands Fine -->
+    <div class="prod-card" data-cat="fine" data-col="rings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Diamante</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">HE500P</span>
+        <span class="prod-name">Diamante Round Fine Ring</span>
+        <span class="prod-metals">14k White Gold · Rose Gold · Yellow Gold</span>
+        <span class="prod-price">From $1,535</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="rings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Diamante</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">HE505P</span>
+        <span class="prod-name">Diamante Cluster Pear Shape Fine Ring</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $5,095</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="rings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Fashion Band</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">KB600MA</span>
+        <span class="prod-name">Yin-Yang Fashion Band</span>
+        <span class="prod-metals">18k Rose Gold · 18k White Gold · Platinum</span>
+        <span class="prod-price">From $1,765</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="rings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Fashion Band</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">KB560MA</span>
+        <span class="prod-name">Four Colors in One Band</span>
+        <span class="prod-metals">18k Gold (Four Colors) · 14k Gold</span>
+        <span class="prod-price">From $4,465</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="fine" data-col="rings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M14 28 C14 20 20 14 28 14 C36 14 42 20 42 28" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M14 28 C14 36 20 42 28 42 C36 42 42 36 42 28" stroke="#AC3438" stroke-width="1.5" fill="none" stroke-dasharray="3 3"/></svg></div>
+        <span class="prod-collection-badge">Limited Edition</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TRR100</span>
+        <span class="prod-name">Trenta Limited Edition Rose Gold and Pearl Diamond Ring</span>
+        <span class="prod-metals">Rose Gold · Pearl</span>
+        <span class="prod-price">$13,510</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- Limited Edition Earrings -->
+    <div class="prod-card" data-cat="fine" data-col="earrings">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M20 10 C20 10 16 20 16 32 C16 38 20 44 28 44 C36 44 40 38 40 32 C40 20 36 10 36 10" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Limited Edition</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TRH101</span>
+        <span class="prod-name">Trenta Limited Edition Pearl Diamond Earrings</span>
+        <span class="prod-metals">14k White Gold · Pearl</span>
+        <span class="prod-price">$17,180</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/fine-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <!-- ===== MEN'S JEWELRY ===== -->
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TM500UA</span>
+        <span class="prod-name">Tubetto Award Winning Wedding Band for Men</span>
+        <span class="prod-metals">18k Black &amp; White Gold</span>
+        <span class="prod-price">$14,280</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TM503P</span>
+        <span class="prod-name">Tubetto Award Winning Wedding Band for Men</span>
+        <span class="prod-metals">18k White Gold · Yellow Gold</span>
+        <span class="prod-price">From $3,710</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TM501ZA</span>
+        <span class="prod-name">Tubetto Men's Black Diamond Wedding Ring</span>
+        <span class="prod-metals">14k White Gold · 18k White Gold</span>
+        <span class="prod-price">From $8,970</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB528LR</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $8,340</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB504VA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k Yellow Gold · White Gold · Rose Gold</span>
+        <span class="prod-price">From $8,200</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB523VA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $7,310</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB545CA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k Rose Gold · White Gold · Yellow Gold</span>
+        <span class="prod-price">From $10,600</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB502VA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">Platinum · 14k White Gold</span>
+        <span class="prod-price">From $7,150</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB506VA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $12,040</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="3"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="1.5" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Tubetto</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">TB544CA</span>
+        <span class="prod-name">Tubetto Diamond Wedding Ring</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $11,530</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M10 20 C10 20 14 28 28 28 C42 28 46 20 46 20" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M10 36 C10 36 14 28 28 28 C42 28 46 36 46 36" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RK500P</span>
+        <span class="prod-name">Norme de Danhov Twisted Chain Bracelet</span>
+        <span class="prod-metals">14k Yellow Gold · Platinum</span>
+        <span class="prod-price">From $5,475</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><path d="M8 28 C8 28 14 16 28 16 C42 16 48 28 48 28 C48 28 42 40 28 40 C14 40 8 28 8 28 Z" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RQ500P</span>
+        <span class="prod-name">Norme de Danhov Twisted Chain Necklace</span>
+        <span class="prod-metals">14k Yellow Gold · Platinum</span>
+        <span class="prod-price">From $13,645</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+    <div class="prod-card" data-cat="mens">
+      <div class="prod-img">
+        <div class="prod-img-placeholder"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="28" r="12" stroke="#AC3438" stroke-width="0.75" opacity="0.5"/></svg></div>
+        <span class="prod-collection-badge">Norme de Danhov</span>
+      </div>
+      <div class="prod-info">
+        <span class="prod-style">RM600S</span>
+        <span class="prod-name">Norme de Danhov Engagement Ring for Men</span>
+        <span class="prod-metals">14k White Gold · Yellow Gold · Rose Gold</span>
+        <span class="prod-price">From $1,660</span>
+      </div>
+      <a class="prod-cta" href="https://danhov.com/men-jewelry" target="_blank">Shop Now &rarr;</a>
+    </div>
+
+  </div>
+
+  <div class="products-load-more">
+    <a href="https://danhov.com" target="_blank"><button class="btn-load-more">View All on Danhov.com &rarr;</button></a>
+  </div>
+</section>
+
+<script>
+  function switchTab(cat, btn) {
+    document.querySelectorAll('.prod-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = document.getElementById('filter-engagement');
+    if (cat === 'engagement') {
+      filter.style.display = 'flex';
+      filterCol('all', filter.querySelector('.prod-filter'));
+    } else {
+      filter.style.display = 'none';
+      document.querySelectorAll('.prod-card').forEach(card => {
+        card.style.display = card.dataset.cat === cat ? 'flex' : 'none';
+      });
+    }
+  }
+  function filterCol(col, btn) {
+    document.querySelectorAll('#filter-engagement .prod-filter').forEach(f => f.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.prod-card').forEach(card => {
+      if (card.dataset.cat !== 'engagement') { card.style.display = 'none'; return; }
+      card.style.display = (col === 'all' || card.dataset.col === col) ? 'flex' : 'none';
+    });
+  }
+  // Init: show engagement rings only
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.prod-card').forEach(card => {
+      card.style.display = card.dataset.cat === 'engagement' ? 'flex' : 'none';
+    });
+  });
+</script>
 
 <!-- DIAMOND SHAPES -->
 <section class="shapes-section">
