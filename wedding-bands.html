@@ -665,6 +665,24 @@
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     .products-header { flex-direction: column; gap: 14px; align-items: flex-start; }
   }
+
+  .prod-img img.prod-real-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .prod-card:hover .prod-img img.prod-real-img { transform: scale(1.04); }
+  .prod-desc {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    color: var(--grey);
+    line-height: 1.65;
+    margin-top: 2px;
+  }
 </style>
 </head>
 <body>
@@ -842,7 +860,8 @@
     <!-- TM500UA — Award Winners + His Bands -->
     <div class="prod-card" data-sub="award-winners his-bands" data-price="14280" data-name="Tubetto Award Winning Band for Men">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/2/_/2_12_2_1.jpg" alt="TM500UA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -857,6 +876,7 @@
       <div class="prod-info">
         <span class="prod-style">TM500UA</span>
         <h3 class="prod-name">Tubetto Award Winning Band for Men</h3>
+        <p class="prod-desc">A bold, clean Torchon design scaled for the groom—geometric, refined, and built for a lifetime.</p>
         <p class="prod-metals">18k Black &amp; White Gold</p>
         <p class="prod-price">$14,280</p>
       </div>
@@ -866,7 +886,8 @@
     <!-- TB500UA — Award Winners + Her Bands -->
     <div class="prod-card" data-sub="award-winners her-bands" data-price="10990" data-name="Tubetto Award Winning Wedding Band">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb500ua_2_1.jpg" alt="TB500UA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -881,6 +902,7 @@
       <div class="prod-info">
         <span class="prod-style">TB500UA</span>
         <h3 class="prod-name">Tubetto Award Winning Wedding Band</h3>
+        <p class="prod-desc">The classic Torchon her band: two delicate gold strands entwined in perpetuity.</p>
         <p class="prod-metals">18k Black &amp; White Gold</p>
         <p class="prod-price">$10,990</p>
       </div>
@@ -890,7 +912,8 @@
     <!-- TM503P — Award Winners + His Bands -->
     <div class="prod-card" data-sub="award-winners his-bands" data-price="3710" data-name="Tubetto Award Winning Band for Men">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/m/tm104-6_cqwaa0kx9cgwbvot.jpg" alt="TM503P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -905,6 +928,7 @@
       <div class="prod-info">
         <span class="prod-style">TM503P</span>
         <h3 class="prod-name">Tubetto Award Winning Band for Men</h3>
+        <p class="prod-desc">Hand-applied milgrain edging graces the Torchon men's band with vintage-inspired sophistication.</p>
         <p class="prod-metals">18k White Gold</p>
         <p class="prod-price">$3,710</p>
       </div>
@@ -914,7 +938,8 @@
     <!-- AE536UQ — Award Winners + Her Bands -->
     <div class="prod-card" data-sub="award-winners her-bands" data-price="2620" data-name="Abbraccio Braided Diamond Wedding Band">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/b/_/b_1_11_2_1.jpg" alt="AE536UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -930,6 +955,7 @@
       <div class="prod-info">
         <span class="prod-style">AE536UQ</span>
         <h3 class="prod-name">Abbraccio Braided Diamond Wedding Band</h3>
+        <p class="prod-desc">The Abbraccio wedding band mirrors the engagement collection's signature interlocked diamond arcs.</p>
         <p class="prod-metals">18k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$2,620</p>
       </div>
@@ -943,7 +969,8 @@
     <!-- TB521VA (1st instance) — Her Bands -->
     <div class="prod-card" data-sub="her-bands" data-price="3910" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/t/b/tb521va_rg_1.jpg" alt="TB521VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -958,6 +985,7 @@
       <div class="prod-info">
         <span class="prod-style">TB521VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Ribbons of rose gold twist elegantly in the Torchon design—a band as expressive as a first dance.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$3,910</p>
       </div>
@@ -967,7 +995,8 @@
     <!-- TB520VA — Her Bands -->
     <div class="prod-card" data-sub="her-bands" data-price="5590" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/t/b/tb520va_wg_1.jpg" alt="TB520VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -982,6 +1011,7 @@
       <div class="prod-info">
         <span class="prod-style">TB520VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">White gold strands intertwine in the Torchon wedding band, a wearable sculpture of enduring love.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$5,590</p>
       </div>
@@ -991,7 +1021,8 @@
     <!-- TB515VA — Her Bands -->
     <div class="prod-card" data-sub="her-bands" data-price="3580" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/t/b/tb515va_wg_1.jpg" alt="TB515VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1006,6 +1037,7 @@
       <div class="prod-info">
         <span class="prod-style">TB515VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Warm yellow gold ribbons twist in the signature Torchon pattern for a timeless, romantic wedding band.</p>
         <p class="prod-metals">Platinum &middot; 18k &middot; 14k White / Yellow / Rose Gold</p>
         <p class="prod-price">From $3,580</p>
       </div>
@@ -1015,7 +1047,8 @@
     <!-- TB521VA (2nd instance, Rose Gold spec) — Her Bands -->
     <div class="prod-card" data-sub="her-bands" data-price="3910" data-name="Tubetto Diamond Wedding Ring Rose Gold">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/t/b/tb521va_rg_1.jpg" alt="TB521VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1030,6 +1063,7 @@
       <div class="prod-info">
         <span class="prod-style">TB521VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Ribbons of rose gold twist elegantly in the Torchon design—a band as expressive as a first dance.</p>
         <p class="prod-metals">14k Rose Gold</p>
         <p class="prod-price">$3,910</p>
       </div>
@@ -1039,7 +1073,8 @@
     <!-- TB528LR — Her Bands -->
     <div class="prod-card" data-sub="her-bands" data-price="8340" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb528va_rg_2.jpg" alt="TB528LR" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1054,6 +1089,7 @@
       <div class="prod-info">
         <span class="prod-style">TB528LR</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Rose gold warmth suffuses the Torchon twist, creating a wedding band as tender as the moment itself.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$8,340</p>
       </div>
@@ -1067,7 +1103,8 @@
     <!-- TM501ZA — His Bands -->
     <div class="prod-card" data-sub="his-bands" data-price="8970" data-name="Tubetto Men's Black Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/m/tm501za_m5aonsrpaidxctzg.jpg" alt="TM501ZA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1082,6 +1119,7 @@
       <div class="prod-info">
         <span class="prod-style">TM501ZA</span>
         <h3 class="prod-name">Tubetto Men's Black Diamond Ring</h3>
+        <p class="prod-desc">A bold polished men's ring with brushed geometric architecture and an elegant matte-finish interior.</p>
         <p class="prod-metals">14k White &middot; 18k White Gold</p>
         <p class="prod-price">$8,970</p>
       </div>
@@ -1091,7 +1129,8 @@
     <!-- TB504VA — His Bands -->
     <div class="prod-card" data-sub="his-bands" data-price="8200" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb504va_yg_2.jpg" alt="TB504VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1106,6 +1145,7 @@
       <div class="prod-info">
         <span class="prod-style">TB504VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Yellow gold strands spiral in the beloved Torchon pattern for a timeless, heirloom-worthy wedding band.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$8,200</p>
       </div>
@@ -1115,7 +1155,8 @@
     <!-- TB523VA — His Bands -->
     <div class="prod-card" data-sub="his-bands" data-price="7310" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb523va_wg_2.jpg" alt="TB523VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1130,6 +1171,7 @@
       <div class="prod-info">
         <span class="prod-style">TB523VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Fine pavé diamonds are set along the Torchon twist, adding irresistible sparkle to the iconic design.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$7,310</p>
       </div>
@@ -1139,7 +1181,8 @@
     <!-- TB545CA — His Bands -->
     <div class="prod-card" data-sub="his-bands" data-price="10600" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb545va_rg_2_1.jpg" alt="TB545CA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1154,6 +1197,7 @@
       <div class="prod-info">
         <span class="prod-style">TB545CA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Pavé diamonds trace the rose gold Torchon spiral for a wedding band of breathtaking dual radiance.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$10,600</p>
       </div>
@@ -1163,7 +1207,8 @@
     <!-- TB502VA — His Bands -->
     <div class="prod-card" data-sub="his-bands" data-price="7150" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb502va_-_inside_flat_wg_2_2.jpg" alt="TB502VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1178,6 +1223,7 @@
       <div class="prod-info">
         <span class="prod-style">TB502VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">A flat-profile Torchon band that wears close and comfortable—love worn every day, all day.</p>
         <p class="prod-metals">Platinum &middot; 14k White Gold</p>
         <p class="prod-price">$7,150</p>
       </div>
@@ -1187,7 +1233,8 @@
     <!-- TB506VA — His Bands -->
     <div class="prod-card" data-sub="his-bands" data-price="12040" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb506va_-_inside_flat_wg_2_1.jpg" alt="TB506VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1202,6 +1249,7 @@
       <div class="prod-info">
         <span class="prod-style">TB506VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">A comfort-fit Torchon wedding band in white gold for those who wear their love all day, every day.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$12,040</p>
       </div>
@@ -1211,7 +1259,8 @@
     <!-- TB544CA — His Bands -->
     <div class="prod-card" data-sub="his-bands" data-price="11530" data-name="Tubetto Diamond Wedding Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb544va_wg_2.jpg" alt="TB544CA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8"/>
             <ellipse cx="40" cy="40" rx="30" ry="11" stroke="#AC3438" stroke-width="1.8" transform="translate(0 6)"/>
@@ -1226,6 +1275,7 @@
       <div class="prod-info">
         <span class="prod-style">TB544CA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Yellow gold and pavé diamonds unite in the Torchon band—a dazzling symbol of lasting commitment.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$11,530</p>
       </div>

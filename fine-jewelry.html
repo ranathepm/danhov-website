@@ -679,6 +679,24 @@
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     .products-header { flex-direction: column; gap: 14px; align-items: flex-start; }
   }
+
+  .prod-img img.prod-real-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .prod-card:hover .prod-img img.prod-real-img { transform: scale(1.04); }
+  .prod-desc {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    color: var(--grey);
+    line-height: 1.65;
+    margin-top: 2px;
+  }
 </style>
 </head>
 <body>
@@ -855,7 +873,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="795" data-name="Norme de Danhov Double Heart Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/p/rp500p-er_without_diamond_1_yg.jpg" alt="RH500P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 58 C20 44 12 30 20 20 C26 12 36 14 40 22 C44 14 54 12 60 20 C68 30 60 44 40 58Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M40 48 C28 38 24 30 28 24 C31 19 37 20 40 26 C43 20 49 19 52 24 C56 30 52 38 40 48Z" stroke="#9b6b4a" stroke-width="0.8" fill="none" opacity="0.6"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -863,6 +882,7 @@
       <div class="prod-info">
         <span class="prod-style">RH500P</span>
         <h3 class="prod-name">Norme de Danhov Double Heart Earrings</h3>
+        <p class="prod-desc">A brilliant center gemstone rests in a refined yellow gold setting for timeless everyday luxury.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$795</p>
       </div>
@@ -871,7 +891,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="1360" data-name="Bezel-Set Round Stud Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/g/r/grp01656_rg_1.jpg" alt="RH504P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="40" r="14" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="40" r="8" stroke="#9b6b4a" stroke-width="1"/><circle cx="52" cy="40" r="14" stroke="#AC3438" stroke-width="1.5"/><circle cx="52" cy="40" r="8" stroke="#9b6b4a" stroke-width="1"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -879,6 +900,7 @@
       <div class="prod-info">
         <span class="prod-style">RH504P</span>
         <h3 class="prod-name">Bezel-Set Round Stud Earrings</h3>
+        <p class="prod-desc">Organic rose gold curves embrace a center gem in a nature-inspired earring of elegant grace.</p>
         <p class="prod-metals">14k Rose &middot; 18k Yellow Gold &middot; Platinum</p>
         <p class="prod-price">$1,360</p>
       </div>
@@ -887,7 +909,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="1580" data-name="Norme de Danhov Flower Diamonds Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/g/r/grp11460_rg_1.jpg" alt="RH508G" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="6" ry="10" stroke="#9b6b4a" stroke-width="1" opacity="0.8"/><ellipse cx="40" cy="56" rx="6" ry="10" stroke="#9b6b4a" stroke-width="1" opacity="0.8"/><ellipse cx="24" cy="40" rx="10" ry="6" stroke="#AC3438" stroke-width="0.9" opacity="0.7"/><ellipse cx="56" cy="40" rx="10" ry="6" stroke="#AC3438" stroke-width="0.9" opacity="0.7"/><ellipse cx="28.7" cy="28.7" rx="6" ry="10" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5" transform="rotate(-45 28.7 28.7)"/><ellipse cx="51.3" cy="51.3" rx="6" ry="10" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5" transform="rotate(-45 51.3 51.3)"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -895,6 +918,7 @@
       <div class="prod-info">
         <span class="prod-style">RH508G</span>
         <h3 class="prod-name">Norme de Danhov Flower Diamonds Earrings</h3>
+        <p class="prod-desc">Sculptural rose gold drop earrings frame the face with architectural precision and a diamond flourish.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$1,580</p>
       </div>
@@ -903,7 +927,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="1900" data-name="Trio Diamond Cluster Stud Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/6/0/60761442_yg_1_1.jpg" alt="RH502P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="40" r="12" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="40" r="5" stroke="#9b6b4a" stroke-width="0.8"/><circle cx="52" cy="40" r="12" stroke="#AC3438" stroke-width="1.5"/><circle cx="52" cy="40" r="5" stroke="#9b6b4a" stroke-width="0.8"/><circle cx="28" cy="28" r="4" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/><circle cx="52" cy="28" r="4" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -911,6 +936,7 @@
       <div class="prod-info">
         <span class="prod-style">RH502P</span>
         <h3 class="prod-name">Trio Diamond Cluster Stud Earrings</h3>
+        <p class="prod-desc">Bold yellow gold disc earrings with fine diamond accents for a luminous, statement-making look.</p>
         <p class="prod-metals">18k Yellow Gold &middot; Platinum</p>
         <p class="prod-price">$1,900</p>
       </div>
@@ -919,7 +945,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="1990" data-name="Norme de Danhov Halo Diamonds Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/6/1/61691790_yg_1_1_.jpg" alt="RH513V" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="40" r="16" stroke="#9b6b4a" stroke-width="0.7" stroke-dasharray="2 2"/><circle cx="52" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><circle cx="52" cy="40" r="16" stroke="#9b6b4a" stroke-width="0.7" stroke-dasharray="2 2"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -927,6 +954,7 @@
       <div class="prod-info">
         <span class="prod-style">RH513V</span>
         <h3 class="prod-name">Norme de Danhov Halo Diamonds Earrings</h3>
+        <p class="prod-desc">Cascading yellow gold drops catch the light with every turn in this vibrant fine jewelry statement.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$1,990</p>
       </div>
@@ -935,7 +963,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="2640" data-name="Norme de Danhov Heart Diamonds Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/g/r/grp08568_1_wg.jpg" alt="RH518U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 46 C18 36 14 26 20 20 C24 16 28 18 28 24 C28 18 32 16 36 20 C42 26 38 36 28 46Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M52 46 C42 36 38 26 44 20 C48 16 52 18 52 24 C52 18 56 16 60 20 C66 26 62 36 52 46Z" stroke="#AC3438" stroke-width="1.5" fill="none"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -943,6 +972,7 @@
       <div class="prod-info">
         <span class="prod-style">RH518U</span>
         <h3 class="prod-name">Norme de Danhov Heart Diamonds Earrings</h3>
+        <p class="prod-desc">A contemporary white gold design balances architectural structure with a brilliant diamond detail.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$2,640</p>
       </div>
@@ -951,7 +981,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="2680" data-name="Norme de Danhov Smile Diamonds Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/3/6/36667168_1_rg_1.jpg" alt="RH506U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 36 Q28 50 40 36" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M40 36 Q52 50 64 36" stroke="#AC3438" stroke-width="1.5" fill="none"/><circle cx="28" cy="30" r="4" stroke="#9b6b4a" stroke-width="1"/><circle cx="52" cy="30" r="4" stroke="#9b6b4a" stroke-width="1"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -959,6 +990,7 @@
       <div class="prod-info">
         <span class="prod-style">RH506U</span>
         <h3 class="prod-name">Norme de Danhov Smile Diamonds Earrings</h3>
+        <p class="prod-desc">Delicate rose gold hoops set with a dazzling diamond for an effortless touch of everyday luxury.</p>
         <p class="prod-metals">18k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$2,680</p>
       </div>
@@ -967,7 +999,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="3460" data-name="Norme de Danhov Heart Diamonds Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/2/6/26544947_wg_1.jpg" alt="RH512U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 60 C16 44 10 26 20 16 C27 9 36 12 40 22 C44 12 53 9 60 16 C70 26 64 44 40 60Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M40 48 C26 38 22 28 28 20 C32 16 38 18 40 26 C42 18 48 16 52 20 C58 28 54 38 40 48Z" stroke="#9b6b4a" stroke-width="0.8" fill="none" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -975,6 +1008,7 @@
       <div class="prod-info">
         <span class="prod-style">RH512U</span>
         <h3 class="prod-name">Norme de Danhov Heart Diamonds Earrings</h3>
+        <p class="prod-desc">Brilliant white gold studs crowned with a diamond are the ultimate in understated refinement.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,460</p>
       </div>
@@ -983,7 +1017,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="3960" data-name="Norme de Danhov Double Halo Natural Diamonds Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/2/8/28646453_wg_1_1_1.jpg" alt="RH510U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="40" r="8" stroke="#AC3438" stroke-width="1.5"/><circle cx="28" cy="40" r="14" stroke="#9b6b4a" stroke-width="0.8"/><circle cx="28" cy="40" r="20" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><circle cx="52" cy="40" r="8" stroke="#AC3438" stroke-width="1.5"/><circle cx="52" cy="40" r="14" stroke="#9b6b4a" stroke-width="0.8"/><circle cx="52" cy="40" r="20" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -991,6 +1026,7 @@
       <div class="prod-info">
         <span class="prod-style">RH510U</span>
         <h3 class="prod-name">Norme de Danhov Double Halo Natural Diamonds Earrings</h3>
+        <p class="prod-desc">Sleek white gold earrings balance minimalism and sparkle in an elevated everyday fine jewelry piece.</p>
         <p class="prod-metals">18k White &middot; Yellow Gold</p>
         <p class="prod-price">$3,960</p>
       </div>
@@ -999,7 +1035,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="4680" data-name="Norme de Danhov Heart Shape Diamond Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/c/s/cs644_rg_1_1.jpg" alt="RH503G" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 50 C14 38 12 24 20 18 C24 14 28 16 28 24 C28 16 32 14 36 18 C44 24 42 38 28 50Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M52 50 C38 38 36 24 44 18 C48 14 52 16 52 24 C52 16 56 14 60 18 C68 24 66 38 52 50Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><circle cx="28" cy="22" r="3" stroke="#9b6b4a" stroke-width="0.8" opacity="0.5"/><circle cx="52" cy="22" r="3" stroke="#9b6b4a" stroke-width="0.8" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -1007,6 +1044,7 @@
       <div class="prod-info">
         <span class="prod-style">RH503G</span>
         <h3 class="prod-name">Norme de Danhov Heart Shape Diamond Earrings</h3>
+        <p class="prod-desc">Rose gold geometric drop earrings with a brilliant diamond detail—clean lines, pure elegance.</p>
         <p class="prod-metals">18k Rose Gold &middot; 14k White Gold</p>
         <p class="prod-price">$4,680</p>
       </div>
@@ -1015,7 +1053,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="4840" data-name="Abbraccio Swirl Cushion Diamond Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/a/h/ah501u_cusion_yg_1.jpg" alt="AH501U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 28 Q28 18 40 20 Q52 18 58 28 Q66 40 58 52 Q52 62 40 60 Q28 62 22 52 Q14 40 22 28Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M28 32 Q32 24 40 26 Q48 24 52 32 Q58 40 52 48 Q48 56 40 54 Q32 56 28 48 Q22 40 28 32Z" stroke="#9b6b4a" stroke-width="0.8" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="5" stroke="#AC3438" stroke-width="0.8" opacity="0.4"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -1023,6 +1062,7 @@
       <div class="prod-info">
         <span class="prod-style">AH501U</span>
         <h3 class="prod-name">Abbraccio Swirl Cushion Diamond Earrings</h3>
+        <p class="prod-desc">A cushion-cut gemstone set in a yellow gold pavé halo for an earring of vintage glamour.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$4,840</p>
       </div>
@@ -1031,7 +1071,8 @@
 
     <div class="prod-card" data-sub="earrings" data-price="6000" data-name="Norme de Danhov CrossOver Medium Hoop Diamond Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/3/7/37608556_1_wg_1.png" alt="RH505U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="40" r="14" stroke="#AC3438" stroke-width="1.8"/><path d="M14 34 Q28 26 42 34" stroke="#9b6b4a" stroke-width="0.9" fill="none" opacity="0.6"/><circle cx="52" cy="40" r="14" stroke="#AC3438" stroke-width="1.8"/><path d="M38 34 Q52 26 66 34" stroke="#9b6b4a" stroke-width="0.9" fill="none" opacity="0.6"/></svg>
         </div>
         <span class="prod-category-badge">Earrings</span>
@@ -1039,6 +1080,7 @@
       <div class="prod-info">
         <span class="prod-style">RH505U</span>
         <h3 class="prod-name">Norme de Danhov CrossOver Medium Hoop Diamond Earrings</h3>
+        <p class="prod-desc">White gold pavé studs scatter light in every direction for a quietly brilliant daytime look.</p>
         <p class="prod-metals">18k White &middot; Yellow Gold</p>
         <p class="prod-price">$6,000</p>
       </div>
@@ -1051,7 +1093,8 @@
 
     <div class="prod-card" data-sub="pendants" data-price="1925" data-name="Norme de Danhov Shamrock Pendant with Rolo Chain">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/c/h/chamrock_pendant_wg_1.jpg" alt="RP503U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="30" r="8" stroke="#AC3438" stroke-width="1.5"/><circle cx="32" cy="44" r="8" stroke="#AC3438" stroke-width="1.5"/><circle cx="48" cy="44" r="8" stroke="#AC3438" stroke-width="1.5"/><line x1="40" y1="52" x2="40" y2="62" stroke="#9b6b4a" stroke-width="1.2"/><path d="M34 62 Q40 58 46 62" stroke="#9b6b4a" stroke-width="0.8" fill="none"/><line x1="40" y1="12" x2="40" y2="22" stroke="#9b6b4a" stroke-width="1.2"/></svg>
         </div>
         <span class="prod-category-badge">Pendants</span>
@@ -1059,6 +1102,7 @@
       <div class="prod-info">
         <span class="prod-style">RP503U</span>
         <h3 class="prod-name">Norme de Danhov Shamrock Pendant with Rolo Chain</h3>
+        <p class="prod-desc">The Danhov Shamrock pendant in white gold—a delicate symbol of fortune and enduring elegance.</p>
         <p class="prod-metals">14k White &middot; Yellow Gold</p>
         <p class="prod-price">$1,925</p>
       </div>
@@ -1067,7 +1111,8 @@
 
     <div class="prod-card" data-sub="pendants" data-price="2980" data-name="Per Lei Diamond Oval Pendant">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le_517_125_sz_6_1.jpg" alt="LP531U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="40" cy="44" rx="16" ry="22" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="44" rx="9" ry="14" stroke="#9b6b4a" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="44" r="4" stroke="#AC3438" stroke-width="0.7" opacity="0.4"/><line x1="40" y1="12" x2="40" y2="22" stroke="#9b6b4a" stroke-width="1.2"/></svg>
         </div>
         <span class="prod-category-badge">Pendants</span>
@@ -1075,6 +1120,7 @@
       <div class="prod-info">
         <span class="prod-style">LP531U</span>
         <h3 class="prod-name">Per Lei Diamond Oval Pendant</h3>
+        <p class="prod-desc">A pavé diamond pendant suspends from a fine chain with luminous, understated grace.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$2,980</p>
       </div>
@@ -1083,7 +1129,8 @@
 
     <div class="prod-card" data-sub="pendants" data-price="3800" data-name="Eleganza Braided Round Pendant">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/1/_/1_3_2.jpg" alt="ZP507U" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="46" r="18" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="46" r="11" stroke="#9b6b4a" stroke-width="0.9"/><circle cx="40" cy="46" r="5" stroke="#AC3438" stroke-width="0.7" opacity="0.4"/><path d="M32 46 Q36 38 40 46 Q44 54 48 46" stroke="#9b6b4a" stroke-width="0.8" fill="none" opacity="0.5"/><line x1="40" y1="12" x2="40" y2="28" stroke="#9b6b4a" stroke-width="1.2"/></svg>
         </div>
         <span class="prod-category-badge">Pendants</span>
@@ -1091,6 +1138,7 @@
       <div class="prod-info">
         <span class="prod-style">ZP507U</span>
         <h3 class="prod-name">Eleganza Braided Round Pendant</h3>
+        <p class="prod-desc">A geometric gold pendant captures light from every facet in a sculptural fine jewelry statement.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,800</p>
       </div>
@@ -1103,7 +1151,8 @@
 
     <div class="prod-card" data-sub="rings" data-price="1535" data-name="Diamante Round Fine Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring-c_round_dai_wg_1.jpg" alt="HE500P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="0.9"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.7" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Rings</span>
@@ -1111,6 +1160,7 @@
       <div class="prod-info">
         <span class="prod-style">HE500P</span>
         <h3 class="prod-name">Diamante Round Fine Ring</h3>
+        <p class="prod-desc">A diamond-accented fine ring in white gold frames the finger with a timeless halo of brilliance.</p>
         <p class="prod-metals">14k White &middot; Rose &middot; Yellow Gold</p>
         <p class="prod-price">$1,535</p>
       </div>
@@ -1119,7 +1169,8 @@
 
     <div class="prod-card" data-sub="rings" data-price="1765" data-name="Yin-Yang Fashion Band">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/w/h/white_top_1.jpg" alt="KB600P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><path d="M40 14 A26 26 0 0 1 40 66 A13 13 0 0 1 40 40 A13 13 0 0 0 40 14Z" stroke="#9b6b4a" stroke-width="0.8" fill="none" opacity="0.6"/><circle cx="40" cy="27" r="4" stroke="#AC3438" stroke-width="0.7" opacity="0.5"/><circle cx="40" cy="53" r="4" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Rings</span>
@@ -1127,6 +1178,7 @@
       <div class="prod-info">
         <span class="prod-style">KB600P</span>
         <h3 class="prod-name">Yin-Yang Fashion Band</h3>
+        <p class="prod-desc">The Yin-Yang fashion band in white gold—a refined symbol of balance in fine jewelry form.</p>
         <p class="prod-metals">18k White Gold</p>
         <p class="prod-price">$1,765</p>
       </div>
@@ -1151,7 +1203,8 @@
 
     <div class="prod-card" data-sub="rings" data-price="5095" data-name="Diamante Cluster Pear Shape Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/c/s/cs621_pear_yg_1_2.jpg" alt="HE505P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 20 Q56 24 58 38 Q60 52 40 60 Q20 52 22 38 Q24 24 40 20Z" stroke="#AC3438" stroke-width="1.5" fill="none"/><path d="M40 28 Q50 31 52 40 Q53 49 40 54 Q27 49 28 40 Q30 31 40 28Z" stroke="#9b6b4a" stroke-width="0.8" fill="none" opacity="0.6"/></svg>
         </div>
         <span class="prod-category-badge">Rings</span>
@@ -1159,6 +1212,7 @@
       <div class="prod-info">
         <span class="prod-style">HE505P</span>
         <h3 class="prod-name">Diamante Cluster Pear Shape Ring</h3>
+        <p class="prod-desc">A pear-shaped diamond cluster in a yellow gold halo glows with warmth from every angle.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$5,095</p>
       </div>
@@ -1167,7 +1221,8 @@
 
     <div class="prod-card" data-sub="rings" data-price="6380" data-name="Yin-Yang Fashion Band">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/o/rose_top_1.jpg" alt="KB600MA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><path d="M40 14 A26 26 0 0 1 40 66 A13 13 0 0 1 40 40 A13 13 0 0 0 40 14Z" stroke="#9b6b4a" stroke-width="0.8" fill="none" opacity="0.6"/><circle cx="40" cy="27" r="4" stroke="#AC3438" stroke-width="0.7" opacity="0.5"/><circle cx="40" cy="53" r="4" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5"/><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="0.4" opacity="0.3" stroke-dasharray="3 3"/></svg>
         </div>
         <span class="prod-category-badge">Rings</span>
@@ -1175,6 +1230,7 @@
       <div class="prod-info">
         <span class="prod-style">KB600MA</span>
         <h3 class="prod-name">Yin-Yang Fashion Band</h3>
+        <p class="prod-desc">The Yin-Yang band in rose gold and platinum—a harmonious symbol of duality in fine jewelry.</p>
         <p class="prod-metals">18k Rose Gold &middot; Platinum</p>
         <p class="prod-price">$6,380</p>
       </div>
@@ -1183,7 +1239,8 @@
 
     <div class="prod-card" data-sub="rings" data-price="8245" data-name="Diamante Round Fine Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring-c_round_dai-diamond_rg_1.jpg" alt="HE501P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.8"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="0.7"/><circle cx="40" cy="40" r="4" stroke="#9b6b4a" stroke-width="0.5" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Rings</span>
@@ -1191,6 +1248,7 @@
       <div class="prod-info">
         <span class="prod-style">HE501P</span>
         <h3 class="prod-name">Diamante Round Fine Ring</h3>
+        <p class="prod-desc">A rose gold ring with a round brilliant diamond halo that glows with depth and warmth.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$8,245</p>
       </div>
@@ -1203,7 +1261,8 @@
 
     <div class="prod-card" data-sub="bands" data-price="4465" data-name="Four Colors in One Band">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/6/1/61_1_1.jpg" alt="KB560MA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="30" width="60" height="20" rx="10" stroke="#AC3438" stroke-width="1.5"/><rect x="10" y="30" width="15" height="20" rx="0" fill="none" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5"/><rect x="25" y="30" width="15" height="20" rx="0" fill="none" stroke="#AC3438" stroke-width="0.7" opacity="0.5"/><rect x="40" y="30" width="15" height="20" rx="0" fill="none" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5"/><rect x="55" y="30" width="15" height="20" rx="0" fill="none" stroke="#AC3438" stroke-width="0.7" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Bands</span>
@@ -1211,6 +1270,7 @@
       <div class="prod-info">
         <span class="prod-style">KB560MA</span>
         <h3 class="prod-name">Four Colors in One Band</h3>
+        <p class="prod-desc">A sleek stacking band in polished gold—the foundational piece of any curated ring stack.</p>
         <p class="prod-metals">18k Gold (Four Colors)</p>
         <p class="prod-price">$4,465</p>
       </div>
@@ -1219,7 +1279,8 @@
 
     <div class="prod-card" data-sub="bands" data-price="4790" data-name="Four Colors in One Band">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/5/8/58_1_1.jpg" alt="KB557MA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="28" width="60" height="24" rx="12" stroke="#AC3438" stroke-width="1.5"/><line x1="25" y1="28" x2="25" y2="52" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5"/><line x1="40" y1="28" x2="40" y2="52" stroke="#AC3438" stroke-width="0.7" opacity="0.5"/><line x1="55" y1="28" x2="55" y2="52" stroke="#9b6b4a" stroke-width="0.7" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Bands</span>
@@ -1227,6 +1288,7 @@
       <div class="prod-info">
         <span class="prod-style">KB557MA</span>
         <h3 class="prod-name">Four Colors in One Band</h3>
+        <p class="prod-desc">A textured stacking band in polished gold that creates beautiful contrast when layered.</p>
         <p class="prod-metals">14k Gold</p>
         <p class="prod-price">$4,790</p>
       </div>
@@ -1235,7 +1297,8 @@
 
     <div class="prod-card" data-sub="bands" data-price="5765" data-name="Four Colors in One Band">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/6/2/62_1.jpg" alt="KB561MA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="28" width="60" height="24" rx="12" stroke="#AC3438" stroke-width="1.5"/><rect x="16" y="33" width="48" height="14" rx="7" stroke="#9b6b4a" stroke-width="0.7"/><line x1="28" y1="28" x2="28" y2="52" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="40" y1="28" x2="40" y2="52" stroke="#9b6b4a" stroke-width="0.5" opacity="0.4"/><line x1="52" y1="28" x2="52" y2="52" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-category-badge">Bands</span>
@@ -1243,6 +1306,7 @@
       <div class="prod-info">
         <span class="prod-style">KB561MA</span>
         <h3 class="prod-name">Four Colors in One Band</h3>
+        <p class="prod-desc">Four colors of gold unite in a single band—a chromatic jewel of remarkable craftsmanship.</p>
         <p class="prod-metals">18k Gold</p>
         <p class="prod-price">$5,765</p>
       </div>
@@ -1271,7 +1335,8 @@
 
     <div class="prod-card" data-sub="limited" data-price="13510" data-name="Trenta Limited Edition Rose Gold and Pearl Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/1/0/100-4pr_dcdrsi3jx2ulscxc.jpg" alt="TRR100" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="24" r="6" stroke="#AC3438" stroke-width="0.9"/><circle cx="40" cy="24" r="3" fill="#c9a898" opacity="0.5"/><path d="M36 40 Q40 32 44 40 Q40 48 36 40Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.5"/></svg>
         </div>
         <span class="prod-category-badge">Limited Edition</span>
@@ -1280,6 +1345,7 @@
       <div class="prod-info">
         <span class="prod-style">TRR100</span>
         <h3 class="prod-name">Trenta Limited Edition Rose Gold and Pearl Diamond Ring</h3>
+        <p class="prod-desc">A limited-edition rose gold and pearl diamond ring—a rare collector's jewel for a singular occasion.</p>
         <p class="prod-metals">Rose Gold &middot; Pearl</p>
         <p class="prod-price">$13,510</p>
       </div>
@@ -1288,7 +1354,8 @@
 
     <div class="prod-card" data-sub="limited" data-price="17180" data-name="Trenta Limited Edition Pearl Diamond Earrings">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/e/a/ear_pearl_w_-_w_qn5tp5zrnibfnf02.jpg" alt="TRH101" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="26" cy="38" r="10" stroke="#AC3438" stroke-width="1.5"/><circle cx="26" cy="24" r="5" stroke="#9b6b4a" stroke-width="0.9"/><circle cx="26" cy="24" r="2.5" fill="#c9a898" opacity="0.5"/><circle cx="54" cy="38" r="10" stroke="#AC3438" stroke-width="1.5"/><circle cx="54" cy="24" r="5" stroke="#9b6b4a" stroke-width="0.9"/><circle cx="54" cy="24" r="2.5" fill="#c9a898" opacity="0.5"/><line x1="26" y1="29" x2="26" y2="28" stroke="#9b6b4a" stroke-width="1"/><line x1="54" y1="29" x2="54" y2="28" stroke="#9b6b4a" stroke-width="1"/></svg>
         </div>
         <span class="prod-category-badge">Limited Edition</span>
@@ -1297,6 +1364,7 @@
       <div class="prod-info">
         <span class="prod-style">TRH101</span>
         <h3 class="prod-name">Trenta Limited Edition Pearl Diamond Earrings</h3>
+        <p class="prod-desc">Limited-edition white gold earrings with a luminous pearl—a heritage-inspired jewel of singular beauty.</p>
         <p class="prod-metals">14k White Gold &middot; Pearl</p>
         <p class="prod-price">$17,180</p>
       </div>

@@ -679,6 +679,24 @@
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     .products-header { flex-direction: column; gap: 14px; align-items: flex-start; }
   }
+
+  .prod-img img.prod-real-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .prod-card:hover .prod-img img.prod-real-img { transform: scale(1.04); }
+  .prod-desc {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    color: var(--grey);
+    line-height: 1.65;
+    margin-top: 2px;
+  }
 </style>
 </head>
 <body>
@@ -867,7 +885,8 @@
 
     <div class="prod-card" data-col="abbraccio" data-metal="yellow white rose" data-price="5390" data-name="Abbraccio Swirl Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/a/e/ae520uq_r1_1_wg.jpg" alt="AE520UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.8"/><ellipse cx="40" cy="40" rx="36" ry="14" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-collection-badge">Abbraccio</span>
@@ -875,6 +894,7 @@
       <div class="prod-info">
         <span class="prod-style">AE520UQ</span>
         <h3 class="prod-name">Abbraccio Swirl Diamond Ring</h3>
+        <p class="prod-desc">Intertwining diamond-set tendrils spiral upward to cradle a breathtaking center stone.</p>
         <p class="prod-metals">18k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$5,390</p>
       </div>
@@ -883,7 +903,8 @@
 
     <div class="prod-card" data-col="abbraccio" data-metal="rose white yellow" data-price="6490" data-name="Abbraccio Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_2_1.jpg" alt="AE507UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.8"/><ellipse cx="40" cy="40" rx="36" ry="14" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-collection-badge">Abbraccio</span>
@@ -891,6 +912,7 @@
       <div class="prod-info">
         <span class="prod-style">AE507UQ</span>
         <h3 class="prod-name">Abbraccio Engagement Ring</h3>
+        <p class="prod-desc">A cascading pavé halo envelops the center diamond in a luminous, multi-tiered embrace.</p>
         <p class="prod-metals">18k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$6,490</p>
       </div>
@@ -899,7 +921,8 @@
 
     <div class="prod-card" data-col="abbraccio" data-metal="yellow white rose" data-price="9400" data-name="Abbraccio Three Stone Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/1/r1_18_2.jpg" alt="AE511UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.8"/><ellipse cx="40" cy="40" rx="36" ry="14" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-collection-badge">Abbraccio</span>
@@ -907,6 +930,7 @@
       <div class="prod-info">
         <span class="prod-style">AE511UQ</span>
         <h3 class="prod-name">Abbraccio Three Stone Ring</h3>
+        <p class="prod-desc">Ribbon-like prongs flow seamlessly into a shimmering pavé band in a single sculptural gesture.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$9,400</p>
       </div>
@@ -915,7 +939,8 @@
 
     <div class="prod-card" data-col="abbraccio" data-metal="rose white yellow" data-price="6530" data-name="Abbraccio Unique Swirl Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_1_.jpg" alt="AE506UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.8"/><ellipse cx="40" cy="40" rx="36" ry="14" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-collection-badge">Abbraccio</span>
@@ -923,6 +948,7 @@
       <div class="prod-info">
         <span class="prod-style">AE506UQ</span>
         <h3 class="prod-name">Abbraccio Unique Swirl Ring</h3>
+        <p class="prod-desc">Two arching diamond-set rows cross beneath the center stone in a graceful embrace of light.</p>
         <p class="prod-metals">18k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$6,530</p>
       </div>
@@ -931,7 +957,8 @@
 
     <div class="prod-card" data-col="abbraccio" data-metal="yellow white rose" data-price="6730" data-name="Abbraccio Ladies Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/w/h/white_3__1.png" alt="AE530UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.8"/><ellipse cx="40" cy="40" rx="36" ry="14" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-collection-badge">Abbraccio</span>
@@ -939,6 +966,7 @@
       <div class="prod-info">
         <span class="prod-style">AE530UQ</span>
         <h3 class="prod-name">Abbraccio Ladies Engagement Ring</h3>
+        <p class="prod-desc">White gold strands weave a romantic braid of brilliance around a resplendent center diamond.</p>
         <p class="prod-metals">18k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$6,730</p>
       </div>
@@ -947,7 +975,8 @@
 
     <div class="prod-card" data-col="abbraccio" data-metal="rose white yellow" data-price="5230" data-name="Abbraccio Princess Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/a/e/ae136_pr_1_rg.jpg" alt="AE505UQ-PR" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.8"/><ellipse cx="40" cy="40" rx="36" ry="14" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-collection-badge">Abbraccio</span>
@@ -955,6 +984,7 @@
       <div class="prod-info">
         <span class="prod-style">AE505UQ-PR</span>
         <h3 class="prod-name">Abbraccio Princess Diamond Ring</h3>
+        <p class="prod-desc">The beloved Abbraccio silhouette reimagined with a pear-shaped center stone in rose gold warmth.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$5,230</p>
       </div>
@@ -963,7 +993,8 @@
 
     <div class="prod-card" data-col="abbraccio" data-metal="rose white" data-price="11800" data-name="Abbraccio Swirl Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_42_1.jpg" alt="AE538VQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><circle cx="40" cy="40" r="8" stroke="#AC3438" stroke-width="0.8"/><ellipse cx="40" cy="40" rx="36" ry="14" stroke="#9b6b4a" stroke-width="0.6" opacity="0.5"/></svg>
         </div>
         <span class="prod-collection-badge">Abbraccio</span>
@@ -971,6 +1002,7 @@
       <div class="prod-info">
         <span class="prod-style">AE538VQ</span>
         <h3 class="prod-name">Abbraccio Swirl Diamond Ring</h3>
+        <p class="prod-desc">Delicate wire-form prongs suspend the center diamond in a floating, architectural frame of light.</p>
         <p class="prod-metals">18k Rose &middot; White Gold</p>
         <p class="prod-price">$11,800</p>
       </div>
@@ -983,7 +1015,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="yellow white rose" data-price="3700" data-name="Voltaggio Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve515p-emerald_wg_1.jpg" alt="VE515P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -991,6 +1024,7 @@
       <div class="prod-info">
         <span class="prod-style">VE515P</span>
         <h3 class="prod-name">Voltaggio Engagement Ring</h3>
+        <p class="prod-desc">Signature tension prongs harness electricity to suspend a vivid emerald-cut diamond in mid-air.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$3,700</p>
       </div>
@@ -999,7 +1033,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="white yellow rose" data-price="6480" data-name="Voltaggio Tension Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve510vh-50_1_yg.jpg" alt="V1E510VH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1007,6 +1042,7 @@
       <div class="prod-info">
         <span class="prod-style">V1E510VH</span>
         <h3 class="prod-name">Voltaggio Tension Engagement Ring</h3>
+        <p class="prod-desc">Bold Voltaggio arms grip a round brilliant diamond, allowing light to pass through every facet.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$6,480</p>
       </div>
@@ -1015,7 +1051,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="white yellow" data-price="9170" data-name="Voltaggio Unique Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/t/e/tension_rush_2_v122_v2_wg_1.jpg" alt="VE508VH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1023,6 +1060,7 @@
       <div class="prod-info">
         <span class="prod-style">VE508VH</span>
         <h3 class="prod-name">Voltaggio Unique Engagement Ring</h3>
+        <p class="prod-desc">The iconic Tension Rush design channels raw energy into a breathtaking suspended diamond silhouette.</p>
         <p class="prod-metals">14k White &middot; Yellow Gold</p>
         <p class="prod-price">$9,170</p>
       </div>
@@ -1031,7 +1069,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="rose white yellow" data-price="6120" data-name="Voltaggio Tension Set Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve506_wg_1.jpg" alt="VE506VZ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1039,6 +1078,7 @@
       <div class="prod-info">
         <span class="prod-style">VE506VZ</span>
         <h3 class="prod-name">Voltaggio Tension Set Ring</h3>
+        <p class="prod-desc">A refined white gold tension setting presents the center diamond in breathtaking open-air suspension.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$6,120</p>
       </div>
@@ -1047,7 +1087,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="rose white yellow" data-price="6350" data-name="Voltaggio Tension Set Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve535p-diamond_rg_1.jpg" alt="VE535VH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1055,6 +1096,7 @@
       <div class="prod-info">
         <span class="prod-style">VE535VH</span>
         <h3 class="prod-name">Voltaggio Tension Set Ring</h3>
+        <p class="prod-desc">Cushion-cluster diamonds surround the center gem, elevated by Voltaggio's signature tension artistry.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$6,350</p>
       </div>
@@ -1063,7 +1105,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="white yellow rose" data-price="4500" data-name="Voltaggio Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/3/_/3_round_wg_1.jpg" alt="VE536P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1071,6 +1114,7 @@
       <div class="prod-info">
         <span class="prod-style">VE536P</span>
         <h3 class="prod-name">Voltaggio Engagement Ring</h3>
+        <p class="prod-desc">Concentric diamond-set prongs orbit the center stone in a celestial expression of Voltaggio brilliance.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,500</p>
       </div>
@@ -1079,7 +1123,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="rose white" data-price="7050" data-name="Voltaggio Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/2/_/2_round_yg_1.jpg" alt="VE536VH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1087,6 +1132,7 @@
       <div class="prod-info">
         <span class="prod-style">VE536VH</span>
         <h3 class="prod-name">Voltaggio Engagement Ring</h3>
+        <p class="prod-desc">Yellow gold tension arms extend with architectural precision to embrace a brilliant-cut center diamond.</p>
         <p class="prod-metals">14k Rose &middot; White Gold</p>
         <p class="prod-price">$7,050</p>
       </div>
@@ -1095,7 +1141,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="yellow white rose" data-price="5480" data-name="Voltaggio Tension Set Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve510vh-50_1_yg.jpg" alt="VE510P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1103,6 +1150,7 @@
       <div class="prod-info">
         <span class="prod-style">VE510P</span>
         <h3 class="prod-name">Voltaggio Tension Set Ring</h3>
+        <p class="prod-desc">A Voltaggio pavé half-halo of brilliant diamonds accentuates the center stone's natural radiance.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$5,480</p>
       </div>
@@ -1111,7 +1159,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="rose white" data-price="7790" data-name="Voltaggio Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/t/e/tension_rush_2_v122_v1_wg_1.jpg" alt="VE508LR" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1119,6 +1168,7 @@
       <div class="prod-info">
         <span class="prod-style">VE508LR</span>
         <h3 class="prod-name">Voltaggio Engagement Ring</h3>
+        <p class="prod-desc">The legendary Tension Rush holds a Lab-created diamond in suspended luminous perfection.</p>
         <p class="prod-metals">14k Rose &middot; White Gold</p>
         <p class="prod-price">$7,790</p>
       </div>
@@ -1127,7 +1177,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="rose white yellow" data-price="5960" data-name="Voltaggio Tension Set Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve534p1_ch_1_wg.jpg" alt="VE534P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1135,6 +1186,7 @@
       <div class="prod-info">
         <span class="prod-style">VE534P</span>
         <h3 class="prod-name">Voltaggio Tension Set Ring</h3>
+        <p class="prod-desc">Channel-set side diamonds flow toward a center stone held in signature Voltaggio tension.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$5,960</p>
       </div>
@@ -1143,7 +1195,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="white yellow" data-price="4430" data-name="Voltaggio Tension Set Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve535p-final_yg_1.jpg" alt="VE535LR" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1151,6 +1204,7 @@
       <div class="prod-info">
         <span class="prod-style">VE535LR</span>
         <h3 class="prod-name">Voltaggio Tension Set Ring</h3>
+        <p class="prod-desc">Yellow gold tension prongs elevate a Lab-created diamond above a delicate pavé-set band.</p>
         <p class="prod-metals">14k White &middot; Yellow Gold</p>
         <p class="prod-price">$4,430</p>
       </div>
@@ -1159,7 +1213,8 @@
 
     <div class="prod-card" data-col="voltaggio" data-metal="yellow white rose" data-price="5960" data-name="Voltaggio Tension Set Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/v/e/ve509p_1_rg.jpg" alt="VE509P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="16" stroke="#AC3438" stroke-width="1"/><path d="M40 14 L66 40 L40 66 L14 40 Z" stroke="#9b6b4a" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="6" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Voltaggio</span>
@@ -1167,6 +1222,7 @@
       <div class="prod-info">
         <span class="prod-style">VE509P</span>
         <h3 class="prod-name">Voltaggio Tension Set Ring</h3>
+        <p class="prod-desc">Rose gold tension arms reach up to suspend a round brilliant diamond in a sculptural rosy arc.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$5,960</p>
       </div>
@@ -1179,7 +1235,8 @@
 
     <div class="prod-card" data-col="classico" data-metal="white yellow rose" data-price="2820" data-name="Classico Handcrafted Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/w/e/we520p_r1_wg_1__2.jpg" alt="WE520P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><polygon points="40,22 54,34 54,46 40,58 26,46 26,34" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Classico</span>
@@ -1187,6 +1244,7 @@
       <div class="prod-info">
         <span class="prod-style">WE520P</span>
         <h3 class="prod-name">Classico Handcrafted Diamond Ring</h3>
+        <p class="prod-desc">A timeless cathedral solitaire holds a radiant center stone in six-prong white gold perfection.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$2,820</p>
       </div>
@@ -1195,7 +1253,8 @@
 
     <div class="prod-card" data-col="classico" data-metal="rose white yellow" data-price="4000" data-name="Classico Round Cut Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring_1_.jpg" alt="WE531VQ-R" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><polygon points="40,22 54,34 54,46 40,58 26,46 26,34" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Classico</span>
@@ -1203,6 +1262,7 @@
       <div class="prod-info">
         <span class="prod-style">WE531VQ-R</span>
         <h3 class="prod-name">Classico Round Cut Engagement Ring</h3>
+        <p class="prod-desc">Graceful tapered white gold prongs elevate a round brilliant diamond in clean, classic splendor.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">$4,000</p>
       </div>
@@ -1211,7 +1271,8 @@
 
     <div class="prod-card" data-col="classico" data-metal="yellow white rose" data-price="5740" data-name="Classico Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/1/r1_4_3.jpg" alt="WE532UH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><polygon points="40,22 54,34 54,46 40,58 26,46 26,34" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Classico</span>
@@ -1219,6 +1280,7 @@
       <div class="prod-info">
         <span class="prod-style">WE532UH</span>
         <h3 class="prod-name">Classico Engagement Ring</h3>
+        <p class="prod-desc">A refined cathedral setting frames the center diamond with understated white gold elegance.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">$5,740</p>
       </div>
@@ -1231,7 +1293,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="2320" data-name="Norme de Danhov Ring for Women">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le541p-wg1.jpg" alt="RE601P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1239,6 +1302,7 @@
       <div class="prod-info">
         <span class="prod-style">RE601P</span>
         <h3 class="prod-name">Norme de Danhov Ring for Women</h3>
+        <p class="prod-desc">The Norme signature crescent band cradles a brilliant center stone in a serene architectural frame.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$2,320</p>
       </div>
@@ -1247,7 +1311,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="2320" data-name="Norme de Danhov Classico Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/e/re573p_1_r1_wg.jpg" alt="RE573P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1255,6 +1320,7 @@
       <div class="prod-info">
         <span class="prod-style">RE573P</span>
         <h3 class="prod-name">Norme de Danhov Classico Ring</h3>
+        <p class="prod-desc">Sleek converging gold bands meet beneath the center diamond in geometric Norme precision.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$2,320</p>
       </div>
@@ -1263,7 +1329,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="2420" data-name="Norme de Danhov Classic Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_2_1_1_1.jpg" alt="RE570P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1271,6 +1338,7 @@
       <div class="prod-info">
         <span class="prod-style">RE570P</span>
         <h3 class="prod-name">Norme de Danhov Classic Ring</h3>
+        <p class="prod-desc">A refined bypass design allows two elegant bands to cross beneath a luminous center stone.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$2,420</p>
       </div>
@@ -1279,7 +1347,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white rose" data-price="3030" data-name="Norme de Danhov Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_37_4.jpg" alt="RE578UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1287,6 +1356,7 @@
       <div class="prod-info">
         <span class="prod-style">RE578UQ</span>
         <h3 class="prod-name">Norme de Danhov Diamond Ring</h3>
+        <p class="prod-desc">A dazzling opulent cluster frames the center stone in a radiant pavé crown of diamonds.</p>
         <p class="prod-metals">14k White &middot; Rose Gold (Two Tone)</p>
         <p class="prod-price">$3,030</p>
       </div>
@@ -1295,7 +1365,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="rose" data-price="3030" data-name="Norme de Danhov Two Tone Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_37_2.jpg" alt="RE578UQ-DT" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1303,6 +1374,7 @@
       <div class="prod-info">
         <span class="prod-style">RE578UQ-DT</span>
         <h3 class="prod-name">Norme de Danhov Two Tone Ring</h3>
+        <p class="prod-desc">A double-pavé halo towers above the band, lifting the center gem to breathtaking sculptural heights.</p>
         <p class="prod-metals">14k Rose Gold &middot; Two Tone</p>
         <p class="prod-price">$3,030</p>
       </div>
@@ -1311,7 +1383,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="3140" data-name="Norme de Danhov Ring for Women">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/e/re573p_r1_wg.jpg" alt="RE573UH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1319,6 +1392,7 @@
       <div class="prod-info">
         <span class="prod-style">RE573UH</span>
         <h3 class="prod-name">Norme de Danhov Ring for Women</h3>
+        <p class="prod-desc">The clean architectural Norme silhouette channels modern luxury with flawless white gold lines.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,140</p>
       </div>
@@ -1327,7 +1401,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="3520" data-name="Norme de Danhov Halo Ladies Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/c/s/cs604_r_wg_1.jpg" alt="RE589UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1335,6 +1410,7 @@
       <div class="prod-info">
         <span class="prod-style">RE589UQ</span>
         <h3 class="prod-name">Norme de Danhov Halo Ladies Ring</h3>
+        <p class="prod-desc">Micro-pavé diamonds encircle the center stone in a delicate halo of exceptional brilliance.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,520</p>
       </div>
@@ -1343,7 +1419,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="3680" data-name="Norme de Danhov Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_1_1_1.jpg" alt="RE570UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1351,6 +1428,7 @@
       <div class="prod-info">
         <span class="prod-style">RE570UQ</span>
         <h3 class="prod-name">Norme de Danhov Diamond Ring</h3>
+        <p class="prod-desc">An elegant yellow gold bypass design wraps the finger in warm geometric sophistication.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,680</p>
       </div>
@@ -1359,7 +1437,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="5820" data-name="Norme de Danhov Ladies Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_39_2.jpg" alt="RE591UH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1367,6 +1446,7 @@
       <div class="prod-info">
         <span class="prod-style">RE591UH</span>
         <h3 class="prod-name">Norme de Danhov Ladies Ring</h3>
+        <p class="prod-desc">Asymmetric gold prongs frame the center diamond in a bold, architecturally modern statement.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$5,820</p>
       </div>
@@ -1375,7 +1455,8 @@
 
     <div class="prod-card" data-col="norme" data-metal="white yellow rose" data-price="3440" data-name="Norme de Danhov Classic Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/e/re572p_r1_wg.jpg" alt="RE572P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#9b6b4a" stroke-width="1.5"/><circle cx="40" cy="40" r="19" stroke="#AC3438" stroke-width="1"/><circle cx="40" cy="40" r="11" stroke="#9b6b4a" stroke-width="0.8"/><line x1="40" y1="13" x2="40" y2="67" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/><line x1="13" y1="40" x2="67" y2="40" stroke="#AC3438" stroke-width="0.5" opacity="0.4"/></svg>
         </div>
         <span class="prod-collection-badge">Norme</span>
@@ -1383,6 +1464,7 @@
       <div class="prod-info">
         <span class="prod-style">RE572P</span>
         <h3 class="prod-name">Norme de Danhov Classic Ring</h3>
+        <p class="prod-desc">French pavé-set diamonds sweep gracefully beneath the center stone in signature Norme elegance.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,440</p>
       </div>
@@ -1395,7 +1477,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="1560" data-name="Carezza Handmade Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe112-4_zxri7bauldnqdlfb.jpg" alt="XE112" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1403,6 +1486,7 @@
       <div class="prod-info">
         <span class="prod-style">XE112</span>
         <h3 class="prod-name">Carezza Handmade Ring</h3>
+        <p class="prod-desc">A crown of delicate gold filaments rises in ornate architectural glory around the center stone.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$1,560</p>
       </div>
@@ -1411,7 +1495,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="3090" data-name="Carezza Handcrafted Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe110-4_zah1xnqpx7mure19.jpg" alt="XE110" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1419,6 +1504,7 @@
       <div class="prod-info">
         <span class="prod-style">XE110</span>
         <h3 class="prod-name">Carezza Handcrafted Ring</h3>
+        <p class="prod-desc">Inspired by botanical artistry, petal-form prongs unfurl to hold a radiant brilliant gem.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,090</p>
       </div>
@@ -1427,7 +1513,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="4220" data-name="Carezza Double Halo Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe109-4_28whiiz3qjdgegh6.jpg" alt="XE109" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1435,6 +1522,7 @@
       <div class="prod-info">
         <span class="prod-style">XE109</span>
         <h3 class="prod-name">Carezza Double Halo Ring</h3>
+        <p class="prod-desc">Organic curves of polished gold interlock in a sculptural jeweled embrace beneath the center stone.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,220</p>
       </div>
@@ -1443,7 +1531,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="4570" data-name="Carezza Unique Halo Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe105-4_zxla2t0boxk1rk9i.jpg" alt="XE105" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1451,6 +1540,7 @@
       <div class="prod-info">
         <span class="prod-style">XE105</span>
         <h3 class="prod-name">Carezza Unique Halo Ring</h3>
+        <p class="prod-desc">Fine gold wire-work creates an airy lattice beneath a stunning center stone in Carezza tradition.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,570</p>
       </div>
@@ -1459,7 +1549,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="5280" data-name="Carezza Award Winning Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe101-4_upmui7nrymzlglqx.jpg" alt="XE101" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1467,6 +1558,7 @@
       <div class="prod-info">
         <span class="prod-style">XE101</span>
         <h3 class="prod-name">Carezza Award Winning Ring</h3>
+        <p class="prod-desc">Intricate geometric openwork creates a breathtaking negative-space crown for the center diamond.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$5,280</p>
       </div>
@@ -1475,7 +1567,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="6300" data-name="Carezza Three Stone Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe106-4_orqpsduxtx8nlh17.jpg" alt="XE106" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1483,6 +1576,7 @@
       <div class="prod-info">
         <span class="prod-style">XE106</span>
         <h3 class="prod-name">Carezza Three Stone Ring</h3>
+        <p class="prod-desc">A twisting gold ribbon design draws the eye upward to the luminous center diamond.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$6,300</p>
       </div>
@@ -1491,7 +1585,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="6100" data-name="Carezza Unique Halo Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe501uh_w1.jpg" alt="XE501UH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1499,6 +1594,7 @@
       <div class="prod-info">
         <span class="prod-style">XE501UH</span>
         <h3 class="prod-name">Carezza Unique Halo Ring</h3>
+        <p class="prod-desc">Carezza's open-work lattice cradles the diamond in an airy, lace-like embrace of white gold.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$6,100</p>
       </div>
@@ -1507,7 +1603,8 @@
 
     <div class="prod-card" data-col="carezza" data-metal="white yellow rose" data-price="4220" data-name="Carezza Pear Shaped Halo Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/x/e/xe109-ps-4_6qnpfojbvwjshrgi.jpg" alt="XE109-PS" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="26" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="17" stroke="#9b6b4a" stroke-width="1"/><path d="M40 14 C52 26 52 54 40 66 C28 54 28 26 40 14Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Carezza</span>
@@ -1515,6 +1612,7 @@
       <div class="prod-info">
         <span class="prod-style">XE109-PS</span>
         <h3 class="prod-name">Carezza Pear Shaped Halo Ring</h3>
+        <p class="prod-desc">The signature Carezza cradle reimagined for a pear-shaped center stone in romantic silhouette.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,220</p>
       </div>
@@ -1527,7 +1625,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="3250" data-name="Per Lei Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le530p_2_.png" alt="LE530P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1535,6 +1634,7 @@
       <div class="prod-info">
         <span class="prod-style">LE530P</span>
         <h3 class="prod-name">Per Lei Engagement Ring</h3>
+        <p class="prod-desc">A softly curved micro-pavé band leads gracefully to an elevated center stone in gentle splendor.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,250</p>
       </div>
@@ -1543,7 +1643,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="3200" data-name="Per Lei Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le133_1_wg.jpg" alt="LE536P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1551,6 +1652,7 @@
       <div class="prod-info">
         <span class="prod-style">LE536P</span>
         <h3 class="prod-name">Per Lei Engagement Ring</h3>
+        <p class="prod-desc">Mirrored pavé bands converge beneath the center stone in a perfectly balanced Per Lei presentation.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,200</p>
       </div>
@@ -1559,7 +1661,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="3860" data-name="Per Lei Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/1/r1_2.jpg" alt="LE531UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1567,6 +1670,7 @@
       <div class="prod-info">
         <span class="prod-style">LE531UQ</span>
         <h3 class="prod-name">Per Lei Engagement Ring</h3>
+        <p class="prod-desc">Channel-set diamonds frame the shank on both sides, merging into a sparkling center stone setting.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,860</p>
       </div>
@@ -1575,7 +1679,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="4350" data-name="Per Lei Engagement Ring Set">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_wgq_1.png" alt="LE533VH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1583,6 +1688,7 @@
       <div class="prod-info">
         <span class="prod-style">LE533VH</span>
         <h3 class="prod-name">Per Lei Engagement Ring Set</h3>
+        <p class="prod-desc">A Voltaggio-inspired half-halo suspends the center stone above a delicate Per Lei pavé band.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,350</p>
       </div>
@@ -1591,7 +1697,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="4780" data-name="Per Lei Classic Halo Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le500uh-4_2.jpg" alt="LE500UH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1599,6 +1706,7 @@
       <div class="prod-info">
         <span class="prod-style">LE500UH</span>
         <h3 class="prod-name">Per Lei Classic Halo Ring</h3>
+        <p class="prod-desc">Classic Per Lei solitaire elegance: four pavé prongs lift the center diamond above a sleek gold band.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,780</p>
       </div>
@@ -1607,7 +1715,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="5510" data-name="Per Lei Eagle Claw Prong Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_28_2.jpg" alt="LE540UH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1615,6 +1724,7 @@
       <div class="prod-info">
         <span class="prod-style">LE540UH</span>
         <h3 class="prod-name">Per Lei Eagle Claw Prong Ring</h3>
+        <p class="prod-desc">A floating diamond halo appears to hover around the center stone in luminous Per Lei fashion.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$5,510</p>
       </div>
@@ -1623,7 +1733,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="4420" data-name="Per Lei Double Shank Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le106-4_n93zykh3iivvtoac.jpg" alt="LE106" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1631,6 +1742,7 @@
       <div class="prod-info">
         <span class="prod-style">LE106</span>
         <h3 class="prod-name">Per Lei Double Shank Ring</h3>
+        <p class="prod-desc">The Per Lei Lab collection presents Lab-created center stones in signature diamond-flanked prongs.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,420</p>
       </div>
@@ -1639,7 +1751,8 @@
 
     <div class="prod-card" data-col="per-lei" data-metal="white yellow rose" data-price="10500" data-name="Per Lei Diamond Halo Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/l/e/le515yq-4-w_3.jpg" alt="LE515YQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="27" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/><ellipse cx="40" cy="26" rx="8" ry="12" stroke="#AC3438" stroke-width="0.7" fill="none" opacity="0.6"/><circle cx="40" cy="40" r="7" stroke="#9b6b4a" stroke-width="0.8"/></svg>
         </div>
         <span class="prod-collection-badge">Per Lei</span>
@@ -1647,6 +1760,7 @@
       <div class="prod-info">
         <span class="prod-style">LE515YQ</span>
         <h3 class="prod-name">Per Lei Diamond Halo Ring</h3>
+        <p class="prod-desc">Yellow gold warmth cradles a Lab-created center stone in the beloved Per Lei solitaire style.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$10,500</p>
       </div>
@@ -1659,7 +1773,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="3670" data-name="Petalo Floral Designer Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe100-4_wyoutkuwllx9luo1.jpg" alt="FE100" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1667,6 +1782,7 @@
       <div class="prod-info">
         <span class="prod-style">FE100</span>
         <h3 class="prod-name">Petalo Floral Designer Ring</h3>
+        <p class="prod-desc">Petal-shaped prongs unfurl organically to cradle the center diamond in a bloom of polished gold.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,670</p>
       </div>
@@ -1675,7 +1791,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="3220" data-name="Petalo Single Shank Floral Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe104-4_fxrlyz3ml9pdr388.jpg" alt="FE104" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1683,6 +1800,7 @@
       <div class="prod-info">
         <span class="prod-style">FE104</span>
         <h3 class="prod-name">Petalo Single Shank Floral Ring</h3>
+        <p class="prod-desc">A sculptural flower-form crown rises from the band to present a radiant brilliant-cut center stone.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,220</p>
       </div>
@@ -1691,7 +1809,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="3270" data-name="Petalo Unique Designer Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe105-4_cu8o9lshd0emogmx.jpg" alt="FE105" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1699,6 +1818,7 @@
       <div class="prod-info">
         <span class="prod-style">FE105</span>
         <h3 class="prod-name">Petalo Unique Designer Ring</h3>
+        <p class="prod-desc">Five rounded gold petals curve inward to secure the diamond in a breathtaking floral embrace.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,270</p>
       </div>
@@ -1707,7 +1827,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="3940" data-name="Petalo Floral Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe108-4_pmttjjxlszfuz2ak.jpg" alt="FE108" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1715,6 +1836,7 @@
       <div class="prod-info">
         <span class="prod-style">FE108</span>
         <h3 class="prod-name">Petalo Floral Diamond Ring</h3>
+        <p class="prod-desc">Rose gold petals create a warm, romantic setting reminiscent of a delicately blossoming flower.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,940</p>
       </div>
@@ -1723,7 +1845,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="4630" data-name="Petalo Twisted Shank Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe106-4_uwoyksuv8teui2vx.jpg" alt="FE106" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1731,6 +1854,7 @@
       <div class="prod-info">
         <span class="prod-style">FE106</span>
         <h3 class="prod-name">Petalo Twisted Shank Diamond Ring</h3>
+        <p class="prod-desc">Architectural petals in polished gold surround the center stone with modern botanical elegance.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,630</p>
       </div>
@@ -1739,7 +1863,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="4730" data-name="Petalo Single Shank Floral Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe109-4_z68gl6h9v3qjar6g_1.jpg" alt="FE109" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1747,6 +1872,7 @@
       <div class="prod-info">
         <span class="prod-style">FE109</span>
         <h3 class="prod-name">Petalo Single Shank Floral Ring</h3>
+        <p class="prod-desc">A delicate Petalo bloom cradles the center diamond above a channel-set pavé-detailed shank.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,730</p>
       </div>
@@ -1755,7 +1881,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="6250" data-name="Petalo Floral Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe107-4_oypnx3thm0sco60w.jpg" alt="FE107" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1763,6 +1890,7 @@
       <div class="prod-info">
         <span class="prod-style">FE107</span>
         <h3 class="prod-name">Petalo Floral Ring</h3>
+        <p class="prod-desc">Tapered gold petals rise from a diamond-set base, forming a tiered floral crown for the center stone.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$6,250</p>
       </div>
@@ -1771,7 +1899,8 @@
 
     <div class="prod-card" data-col="petalo" data-metal="white yellow rose" data-price="3930" data-name="Petalo Round Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/f/e/fe110-4_yzebeebliw5xpb4x.jpg" alt="FE110" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="10" stroke="#AC3438" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="40" cy="56" rx="7" ry="12" stroke="#9b6b4a" stroke-width="1" opacity="0.7"/><ellipse cx="24" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><ellipse cx="56" cy="40" rx="12" ry="7" stroke="#AC3438" stroke-width="0.8" opacity="0.6"/><circle cx="40" cy="40" r="28" stroke="#9b6b4a" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Petalo</span>
@@ -1779,6 +1908,7 @@
       <div class="prod-info">
         <span class="prod-style">FE110</span>
         <h3 class="prod-name">Petalo Round Diamond Ring</h3>
+        <p class="prod-desc">Slim gold petals align in a tulip form, elevating the center diamond in refined botanical splendor.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,930</p>
       </div>
@@ -1791,7 +1921,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="1970" data-name="Solo Filo Designer Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/z/e/ze130-4_rwymkktez7au0360.jpg" alt="SE108" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1799,6 +1930,7 @@
       <div class="prod-info">
         <span class="prod-style">SE108</span>
         <h3 class="prod-name">Solo Filo Designer Ring</h3>
+        <p class="prod-desc">A single continuous gold thread spirals around a brilliant diamond in masterful Solo Filo artistry.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$1,970</p>
       </div>
@@ -1807,7 +1939,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="3010" data-name="Solo Filo Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/s/e/se125-4_jhnzy4e0nawbhptw.jpg" alt="SE125" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1815,6 +1948,7 @@
       <div class="prod-info">
         <span class="prod-style">SE125</span>
         <h3 class="prod-name">Solo Filo Diamond Ring</h3>
+        <p class="prod-desc">Danhov's signature single-thread design cradles the center stone in an impossibly delicate setting.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$3,010</p>
       </div>
@@ -1823,7 +1957,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="4510" data-name="Solo Filo Double Shank Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/z/e/ze127-3_1h1kluaxm1kclyfu.jpg" alt="SE107" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1831,6 +1966,7 @@
       <div class="prod-info">
         <span class="prod-style">SE107</span>
         <h3 class="prod-name">Solo Filo Double Shank Ring</h3>
+        <p class="prod-desc">One unbroken strand of polished gold loops elegantly to secure the center diamond in ethereal grace.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,510</p>
       </div>
@@ -1839,7 +1975,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="5270" data-name="Solo Filo Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring_new.png" alt="SE513UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1847,6 +1984,7 @@
       <div class="prod-info">
         <span class="prod-style">SE513UQ</span>
         <h3 class="prod-name">Solo Filo Engagement Ring</h3>
+        <p class="prod-desc">A single pavé-set wire wraps the center diamond in the minimalist Solo Filo tradition.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$5,270</p>
       </div>
@@ -1855,7 +1993,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="4790" data-name="Solo Filo Engagement Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring_2__31.png" alt="SE517UH" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1863,6 +2002,7 @@
       <div class="prod-info">
         <span class="prod-style">SE517UH</span>
         <h3 class="prod-name">Solo Filo Engagement Ring</h3>
+        <p class="prod-desc">Delicate gold wire traces an organic path around the center diamond in handcrafted artistry.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$4,790</p>
       </div>
@@ -1871,7 +2011,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="6250" data-name="Solo Filo Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/i/ring_7_2.png" alt="SE500UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1879,6 +2020,7 @@
       <div class="prod-info">
         <span class="prod-style">SE500UQ</span>
         <h3 class="prod-name">Solo Filo Diamond Ring</h3>
+        <p class="prod-desc">The original Solo Filo solitaire: a single gold filament sets the center diamond free in airy suspension.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$6,250</p>
       </div>
@@ -1887,7 +2029,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="6610" data-name="Solo Filo Exclusive Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/1/r1_wg_1_9.jpg" alt="SE516UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1895,6 +2038,7 @@
       <div class="prod-info">
         <span class="prod-style">SE516UQ</span>
         <h3 class="prod-name">Solo Filo Exclusive Diamond Ring</h3>
+        <p class="prod-desc">Refined white gold wire prongs hold the center diamond aloft in the most understated of settings.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$6,610</p>
       </div>
@@ -1903,7 +2047,8 @@
 
     <div class="prod-card" data-col="solo" data-metal="white yellow rose" data-price="6840" data-name="Solo Filo Elegant Diamond Ring">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/637ba258c3859c45128cee99e1ea5a62/r/_/r_1_8_5.jpg" alt="SE510UQ" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/><circle cx="40" cy="40" r="20" stroke="#9b6b4a" stroke-width="0.8"/><path d="M18 40 Q40 20 62 40 Q40 60 18 40Z" stroke="#AC3438" stroke-width="0.6" fill="none" opacity="0.5"/><circle cx="40" cy="40" r="5" fill="#9b6b4a" opacity="0.3"/></svg>
         </div>
         <span class="prod-collection-badge">Solo Filo</span>
@@ -1911,6 +2056,7 @@
       <div class="prod-info">
         <span class="prod-style">SE510UQ</span>
         <h3 class="prod-name">Solo Filo Elegant Diamond Ring</h3>
+        <p class="prod-desc">A Solo Filo setting in white gold surrounds the center stone with a barely-there whisper of light.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">$6,840</p>
       </div>

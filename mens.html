@@ -676,6 +676,24 @@
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     .products-header { flex-direction: column; gap: 14px; align-items: flex-start; }
   }
+
+  .prod-img img.prod-real-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .prod-card:hover .prod-img img.prod-real-img { transform: scale(1.04); }
+  .prod-desc {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    color: var(--grey);
+    line-height: 1.65;
+    margin-top: 2px;
+  }
 </style>
 </head>
 <body>
@@ -847,7 +865,8 @@
     <!-- RM600S -->
     <article class="prod-card" data-sub="rings" data-price="1660">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/v/m/vm532s-wg2.jpg" alt="RM600S" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -859,6 +878,7 @@
       <div class="prod-info">
         <span class="prod-style">RM600S</span>
         <h3 class="prod-name">Norme de Danhov Engagement Ring for Men</h3>
+        <p class="prod-desc">The Sovereign men's ring in white gold delivers bold presence through sleek, architectural refinement.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">From $1,660</p>
       </div>
@@ -868,7 +888,8 @@
     <!-- TM503P -->
     <article class="prod-card" data-sub="rings" data-price="3710">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/m/tm104-6_cqwaa0kx9cgwbvot.jpg" alt="TM503P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -880,6 +901,7 @@
       <div class="prod-info">
         <span class="prod-style">TM503P</span>
         <h3 class="prod-name">Tubetto Award Winning Wedding Band for Men</h3>
+        <p class="prod-desc">Hand-applied milgrain edging graces the Torchon men's band with vintage-inspired sophistication.</p>
         <p class="prod-metals">18k White Gold</p>
         <p class="prod-price">From $3,710</p>
       </div>
@@ -889,7 +911,8 @@
     <!-- TB502VA -->
     <article class="prod-card" data-sub="rings" data-price="7150">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb502va_-_inside_flat_wg_2_2.jpg" alt="TB502VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -901,6 +924,7 @@
       <div class="prod-info">
         <span class="prod-style">TB502VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">A flat-profile Torchon band that wears close and comfortable—love worn every day, all day.</p>
         <p class="prod-metals">Platinum &middot; 14k White Gold</p>
         <p class="prod-price">From $7,150</p>
       </div>
@@ -910,7 +934,8 @@
     <!-- TB523VA -->
     <article class="prod-card" data-sub="rings" data-price="7310">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb523va_wg_2.jpg" alt="TB523VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -922,6 +947,7 @@
       <div class="prod-info">
         <span class="prod-style">TB523VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Fine pavé diamonds are set along the Torchon twist, adding irresistible sparkle to the iconic design.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">From $7,310</p>
       </div>
@@ -931,7 +957,8 @@
     <!-- TB504VA -->
     <article class="prod-card" data-sub="rings" data-price="8200">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb504va_yg_2.jpg" alt="TB504VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -943,6 +970,7 @@
       <div class="prod-info">
         <span class="prod-style">TB504VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Yellow gold strands spiral in the beloved Torchon pattern for a timeless, heirloom-worthy wedding band.</p>
         <p class="prod-metals">14k Yellow &middot; White &middot; Rose Gold</p>
         <p class="prod-price">From $8,200</p>
       </div>
@@ -952,7 +980,8 @@
     <!-- TM501ZA -->
     <article class="prod-card" data-sub="rings" data-price="8970">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/m/tm501za_m5aonsrpaidxctzg.jpg" alt="TM501ZA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -964,6 +993,7 @@
       <div class="prod-info">
         <span class="prod-style">TM501ZA</span>
         <h3 class="prod-name">Tubetto Men's Black Diamond Wedding Ring</h3>
+        <p class="prod-desc">A bold polished men's ring with brushed geometric architecture and an elegant matte-finish interior.</p>
         <p class="prod-metals">14k White &middot; 18k White Gold</p>
         <p class="prod-price">From $8,970</p>
       </div>
@@ -973,7 +1003,8 @@
     <!-- TB528LR -->
     <article class="prod-card" data-sub="rings" data-price="8340">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb528va_rg_2.jpg" alt="TB528LR" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -985,6 +1016,7 @@
       <div class="prod-info">
         <span class="prod-style">TB528LR</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Rose gold warmth suffuses the Torchon twist, creating a wedding band as tender as the moment itself.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">From $8,340</p>
       </div>
@@ -994,7 +1026,8 @@
     <!-- TB506VA -->
     <article class="prod-card" data-sub="rings" data-price="12040">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb506va_-_inside_flat_wg_2_1.jpg" alt="TB506VA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -1006,6 +1039,7 @@
       <div class="prod-info">
         <span class="prod-style">TB506VA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">A comfort-fit Torchon wedding band in white gold for those who wear their love all day, every day.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">From $12,040</p>
       </div>
@@ -1015,7 +1049,8 @@
     <!-- TB544CA -->
     <article class="prod-card" data-sub="rings" data-price="11530">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb544va_wg_2.jpg" alt="TB544CA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -1027,6 +1062,7 @@
       <div class="prod-info">
         <span class="prod-style">TB544CA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Yellow gold and pavé diamonds unite in the Torchon band—a dazzling symbol of lasting commitment.</p>
         <p class="prod-metals">14k White &middot; Yellow &middot; Rose Gold</p>
         <p class="prod-price">From $11,530</p>
       </div>
@@ -1036,7 +1072,8 @@
     <!-- TB545CA -->
     <article class="prod-card" data-sub="rings" data-price="10600">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/t/b/tb545va_rg_2_1.jpg" alt="TB545CA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -1048,6 +1085,7 @@
       <div class="prod-info">
         <span class="prod-style">TB545CA</span>
         <h3 class="prod-name">Tubetto Diamond Wedding Ring</h3>
+        <p class="prod-desc">Pavé diamonds trace the rose gold Torchon spiral for a wedding band of breathtaking dual radiance.</p>
         <p class="prod-metals">14k Rose &middot; White &middot; Yellow Gold</p>
         <p class="prod-price">From $10,600</p>
       </div>
@@ -1057,7 +1095,8 @@
     <!-- TM500UA -->
     <article class="prod-card" data-sub="rings" data-price="14280">
       <div class="prod-img">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/2/_/2_12_2_1.jpg" alt="TM500UA" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="28" stroke="#AC3438" stroke-width="1.5"/>
             <circle cx="40" cy="40" r="18" stroke="#9b6b4a" stroke-width="1"/>
@@ -1069,6 +1108,7 @@
       <div class="prod-info">
         <span class="prod-style">TM500UA</span>
         <h3 class="prod-name">Tubetto Award Winning Wedding Band for Men</h3>
+        <p class="prod-desc">A bold, clean Torchon design scaled for the groom—geometric, refined, and built for a lifetime.</p>
         <p class="prod-metals">18k Black &amp; White Gold</p>
         <p class="prod-price">From $14,280</p>
       </div>
@@ -1080,7 +1120,8 @@
     <!-- RK500P -->
     <article class="prod-card" data-sub="bracelets" data-price="5475">
       <div class="prod-img" style="background: linear-gradient(135deg, #f7ece4 0%, #f0dcd0 50%, #e8cec0 100%);">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/c/s/cs147_br_3_yg.jpg" alt="RK500P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 40 Q20 20 40 18 Q60 16 64 40 Q68 60 48 62 Q28 64 16 40Z" stroke="#AC3438" stroke-width="1.5" fill="none"/>
             <path d="M22 40 Q25 26 40 24 Q55 22 58 40 Q61 55 46 57 Q31 59 22 40Z" stroke="#9b6b4a" stroke-width="1" fill="none"/>
@@ -1091,6 +1132,7 @@
       <div class="prod-info">
         <span class="prod-style">RK500P</span>
         <h3 class="prod-name">Norme de Danhov Twisted Chain Bracelet</h3>
+        <p class="prod-desc">A sleek gold bracelet with a brilliant diamond accent—a refined statement of masculine elegance.</p>
         <p class="prod-metals">14k Yellow Gold</p>
         <p class="prod-price">From $5,475</p>
       </div>
@@ -1100,7 +1142,8 @@
     <!-- RK500P-PLAT -->
     <article class="prod-card" data-sub="bracelets" data-price="11025">
       <div class="prod-img" style="background: linear-gradient(135deg, #f0eef0 0%, #e4e0e8 50%, #d8d4dc 100%);">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/c/s/cs147_br_3_wg_1.jpg" alt="RK500P-PLAT" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 40 Q20 20 40 18 Q60 16 64 40 Q68 60 48 62 Q28 64 16 40Z" stroke="#AC3438" stroke-width="1.5" fill="none"/>
             <path d="M22 40 Q25 26 40 24 Q55 22 58 40 Q61 55 46 57 Q31 59 22 40Z" stroke="#9b6b4a" stroke-width="1" fill="none"/>
@@ -1111,6 +1154,7 @@
       <div class="prod-info">
         <span class="prod-style">RK500P-PLAT</span>
         <h3 class="prod-name">Norme de Danhov Twisted Chain Bracelet</h3>
+        <p class="prod-desc">The platinum RK500P bracelet delivers cool, contemporary luxury with a diamond-set clasp detail.</p>
         <p class="prod-metals">Platinum</p>
         <p class="prod-price">From $11,025</p>
       </div>
@@ -1122,7 +1166,8 @@
     <!-- RQ500P -->
     <article class="prod-card" data-sub="necklaces" data-price="13645">
       <div class="prod-img" style="background: linear-gradient(135deg, #f7ece4 0%, #f0dcd0 50%, #e8cec0 100%);">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/c/s/cs147_ch_2_yg.jpg" alt="RQ500P" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 14 Q40 10 60 14 Q68 30 64 48 Q56 66 40 68 Q24 66 16 48 Q12 30 20 14Z" stroke="#AC3438" stroke-width="1.5" fill="none"/>
             <circle cx="40" cy="62" r="5" stroke="#9b6b4a" stroke-width="1" fill="none"/>
@@ -1134,6 +1179,7 @@
       <div class="prod-info">
         <span class="prod-style">RQ500P</span>
         <h3 class="prod-name">Norme de Danhov Twisted Chain Necklace</h3>
+        <p class="prod-desc">A gold chain pendant with diamond accents for a man who values quiet, intentional fine jewelry.</p>
         <p class="prod-metals">14k Yellow Gold</p>
         <p class="prod-price">From $13,645</p>
       </div>
@@ -1143,7 +1189,8 @@
     <!-- RQ500P-PLAT -->
     <article class="prod-card" data-sub="necklaces" data-price="27515">
       <div class="prod-img" style="background: linear-gradient(135deg, #f0eef0 0%, #e4e0e8 50%, #d8d4dc 100%);">
-        <div class="prod-img-placeholder">
+        <img src="https://www.danhov.com/media/catalog/product/cache/ea0d58647b4a9824b79cc3dff64d52dc/c/s/cs147_ch_2_wg_1.jpg" alt="RQ500P-PLAT" loading="lazy" class="prod-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 14 Q40 10 60 14 Q68 30 64 48 Q56 66 40 68 Q24 66 16 48 Q12 30 20 14Z" stroke="#AC3438" stroke-width="1.5" fill="none"/>
             <circle cx="40" cy="62" r="5" stroke="#9b6b4a" stroke-width="1" fill="none"/>
@@ -1155,6 +1202,7 @@
       <div class="prod-info">
         <span class="prod-style">RQ500P-PLAT</span>
         <h3 class="prod-name">Norme de Danhov Twisted Chain Necklace</h3>
+        <p class="prod-desc">The platinum RQ500P necklace—cool-toned luxury in a refined chain pendant for the discerning man.</p>
         <p class="prod-metals">Platinum</p>
         <p class="prod-price">From $27,515</p>
       </div>
